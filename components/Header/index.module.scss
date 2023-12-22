@@ -8,19 +8,26 @@
 // }
 
 .header {
-  border-bottom: 1px solid #e2e8f0;
+  border-radius: 5px;
+  background: rgba(242, 239, 235, 0.8);
+  max-width: 1200px;
+  height: 48px;
+  padding: 12px 24px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
 
   .navbarLogo {
-    font-size: 2.1rem;
-    font-weight: 500;
-    color: #482ff7;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .vertical-line {
+      border-left: 1px solid black;
+      height: 20px;
+    }
   }
 
   .navMenu {
@@ -32,11 +39,17 @@
       margin-left: 5rem;
 
       .navLink {
-        font-size: 1.6rem;
+        font-size: 22px;
+        font-style: normal;
         font-weight: 400;
-        color: #475569;
+        color: #8c6542;
+
+        &.selected {
+          color: #22401e;
+        }
+
         &:hover {
-          color: #482ff7;
+          color: #22401e;
         }
       }
     }

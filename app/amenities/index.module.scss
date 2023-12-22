@@ -21,38 +21,16 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      width: 90%;
     }
 
     .subHeading {
       color: #8c6542;
       font-size: 28px;
+      line-height: 34px;
       font-style: normal;
       font-weight: 300;
-      line-height: 34px;
       letter-spacing: -0.56px;
-    }
-  }
-
-  .imagesSection {
-    display: flex;
-    gap: 18px;
-
-    .leftImage {
-      background-image: url("../../assets/images/home-image-1.jpeg");
-      background-position: center;
-      width: 815px;
-      height: 580px;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .rightImage {
-      background-image: url("../../assets/images/elixir-home.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 399px;
-      height: 620px;
     }
   }
 }

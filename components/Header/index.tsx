@@ -2,14 +2,17 @@
 import { useState, useEffect } from "react";
 import cn from "classnames";
 import styles from "./index.module.scss";
-import DSRLogo from "assets/images/DSR-Group-Logo-red 1.svg";
+import DSRLogo from "assets/images/DSR-logo.png";
+import ElixirLogo from "assets/images/ELIXIR.png";
 import Link from "next/link";
 import { HeaderTabs } from "../../constants";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
-
   const [screenWidth, setScreenWidth] = useState<Number>(0);
+  const pathname = usePathname();
 
   useEffect(() => {
     const updateScreenWidth = () => {
@@ -31,18 +34,25 @@ const Header = () => {
         window.removeEventListener("resize", updateScreenWidth);
     };
   }, []);
-  
+
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <Link href="#" className={styles.navbarLogo}>
-          DSR Logo
+          <Image src={DSRLogo} alt="DSR" width={82} height={24} />
+          <div className={styles["vertical-line"]}></div>
+          <Image src={ElixirLogo} alt="Elixir" width={55} height={20} />
         </Link>
         <ul className={styles.navMenu}>
           {HeaderTabs?.map((tab, index) => {
             return (
               <li className={styles.navItem} key={index}>
-                <Link href={tab.url} className={styles.navLink}>
+                <Link
+                  href={tab.url}
+                  className={cn(styles.navLink, {
+                    [styles.selected]: pathname === tab.url,
+                  })}
+                >
                   {tab.name}
                 </Link>
               </li>

@@ -10,9 +10,9 @@ html {
 }
 
 body {
-  overflow: hidden;
+  overflow: auto;
   font-family: "Roboto", sans-serif;
-  background-color: $bg-original;
+  margin: 0;
 }
 
 li {
@@ -113,5 +113,18 @@ a {
   .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+.page-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media screen and (max-width: 768px) {
+  .page-container {
+    width: 100%;
+    max-width: 768px;
   }
 }

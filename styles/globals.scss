@@ -117,14 +117,37 @@ a {
 }
 
 .page-container {
+  padding: 24px 80px;
+  overflow: auto;
+  background-color: $bg-original;
   width: 100%;
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
   .page-container {
-    width: 100%;
     max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .page-container {
+    width: 100%;
+    max-width: 992px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .page-container {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .page-container {
+    width: 100%;
+    max-width: 1400px;
   }
 }

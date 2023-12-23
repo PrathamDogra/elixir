@@ -59,3 +59,10 @@ $desktop-width-lg: 1500px;
   justify-content: center;
   align-items: center;
 }
+
+@mixin btn-class {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

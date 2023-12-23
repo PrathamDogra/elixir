@@ -1,58 +1,104 @@
-@import 'styles/colors';
+@import "styles/colors";
+@import "styles/mixins";
 
-.container {
+.headingSection {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  width: 90vw;
-  min-height: 100vh;
-  padding: 24px 80px;
-  overflow: auto;
-  background-color: $bg-original;
+  gap: 16px;
+  margin-top: 20px;
 
-  .headingSection {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    .heading {
-      color: #8c6542;
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-
-    .subHeading {
-      color: #8c6542;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 34px;
-      letter-spacing: -0.56px;
-    }
+  .heading {
+    color: #8c6542;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
-  .imagesSection {
-    display: flex;
-    gap: 18px;
+  .subHeading {
+    color: #8c6542;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 34px;
+    letter-spacing: -0.56px;
+  }
+}
 
-    .leftImage {
-      background-image: url("../../assets/images/home-image-1.jpeg");
-      background-position: center;
-      width: 815px;
-      height: 580px;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+.gallaryCTA {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  .galaryBtn {
+    @include btn-class;
+    color: #22401e;
+  }
+}
 
-    .rightImage {
-      background-image: url("../../assets/images/elixir-home.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 399px;
-      height: 620px;
-    }
+.imagesSection {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-height: 550px;
+  margin-top: 20px;
+
+  .leftImage {
+    background-image: url("../../assets/images/home-image-1.jpeg");
+    background-position: center;
+    width: 800px;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .rightImage {
+    background-image: url("../../assets/images/elixir-home.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 399px;
+    height: 650px;
+  }
+}
+
+.ourLocationSection {
+  position: relative;
+  height: 100vh;
+  padding: 40px 104px;
+  background-color: #7a8c51;
+
+  .ourLocation {
+    color: #fcfbfa;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+  .mapImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-image: url("../../assets/images/map.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70%;
+    min-width: 810px;
+    height: 79%;
+  }
+
+  .viewBtn {
+    position: absolute;
+    bottom: 50px;
+    left: 104px;
+    @include btn-class;
+    color: #22401e;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.4px;
   }
 }

@@ -1,21 +1,54 @@
+"use client";
 import Header from "components/Header";
+import Footer from "components/Footer";
 import styles from "./index.module.scss";
+import { useState } from "react";
+import { SpecificationsList } from "../../constants";
+import cn from "classnames";
 
 const Specification = () => {
+  const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+
+  const handleTitleClick = (index: number) => {
+    if (currentIndex === index) {
+      setCurrentIndex(null);
+    } else {
+      setCurrentIndex(index);
+    }
+  };
   return (
-    <div className={styles.container}>
+    <div className={"page-container"}>
       <Header />
       <div className={styles.headingSection}>
-        <div className={styles.heading}>
-          Discover a sanctuary of wellness, relaxation, and play at our
-          clubhouse.
-        </div>
-        <div className={styles.subHeading}>
-          Enjoy health and fitness amenities like a gym, meditation and yoga
-          hall. With thoughtful design our clubhouse is a haven crafted to
-          elevate every moment and create a rejuvenating experience.
-        </div>
+        <div className={styles.heading}>Specifications</div>
       </div>
+      <div className={styles.list}>
+        {SpecificationsList.map((spec, index) => {
+          return (
+            <div className={styles.accordionSection}>
+              <div
+                className={styles.specTitle}
+                onClick={() => handleTitleClick(index)}
+              >
+                {spec.title}
+              </div>
+              <div
+                className={cn(styles.specValueSection, {
+                  [styles.show]: currentIndex === index,
+                })}
+              >
+                <div className={styles["specValueSection_1"]}>
+                  {spec.value1}
+                </div>
+                <div className={styles["specValueSection_2"]}>
+                  {spec.value2}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <Footer />
     </div>
   );
 };

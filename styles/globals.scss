@@ -117,7 +117,8 @@ a {
 }
 
 .page-container {
-  padding: 24px 80px;
+  position: relative;
+  padding: 24px 0;
   overflow: auto;
   background-color: $bg-original;
   width: 100%;

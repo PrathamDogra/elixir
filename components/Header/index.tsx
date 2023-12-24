@@ -9,7 +9,11 @@ import { HeaderTabs } from "../../constants";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const Header = () => {
+interface IHeader {
+  customClass?: string;
+}
+
+const Header = ({ customClass = "" }: IHeader) => {
   const [isMobile, setIsMobile] = useState(false);
   const [screenWidth, setScreenWidth] = useState<Number>(0);
   const pathname = usePathname();
@@ -36,7 +40,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={cn(styles.header, customClass)}>
       <nav className={styles.navbar}>
         <Link href="#" className={styles.navbarLogo}>
           <Image src={DSRLogo} alt="DSR" width={82} height={24} />

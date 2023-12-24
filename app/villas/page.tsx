@@ -1,9 +1,13 @@
+import Image from "next/image";
 import Header from "components/Header";
+import Footer from "components/Footer";
+import PlayIcon from "assets/icons/play.svg";
 import styles from "./index.module.scss";
+import cn from "classnames";
 
 const Villas = () => {
   return (
-    <div className={styles.container}>
+    <div className={"page-container"}>
       <Header />
       <div className={styles.headingSection}>
         <div className={styles.heading}>Experience elevated urban living</div>
@@ -15,6 +19,12 @@ const Villas = () => {
           living to new heights.
         </div>
       </div>
+      <button className={styles.download}>
+        DOWNLOAD BROCHHURE
+        <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
+        <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
+      </button>
+      <Footer />
     </div>
   );
 };

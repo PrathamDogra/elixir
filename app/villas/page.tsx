@@ -19,6 +19,16 @@ const Villas = () => {
     slidesToScroll: 1,
   };
 
+  const handleDownloadPDF = () => {
+    const pdfUrl = "Sample.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "document.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className={"page-container"}>
       <Header />
@@ -32,7 +42,7 @@ const Villas = () => {
           living to new heights.
         </div>
       </div>
-      <button className={styles.download}>
+      <button className={styles.download} onClick={handleDownloadPDF}>
         DOWNLOAD BROCHHURE
         <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
         <Image src={PlayIcon} width={4.5} height={8.5} alt="" />

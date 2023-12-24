@@ -1,3 +1,35 @@
+import E1200GF from "assets/images/villas/E1200-GF.png";
+import E1200FF from "assets/images/villas/E1200-FF.png";
+import E1200SF from "assets/images/villas/E1200-SF.png";
+
+import E1500GF from "assets/images/villas/Elixir-east-villa-1500-5.png";
+import E1500FF from "assets/images/villas/Elixir-east-villa-1500-6.png";
+import E1500SF from "assets/images/villas/Elixir-east-villa-1500-7.png";
+
+import E2105GF from "assets/images/villas/E2105-1.png";
+import E2105FF from "assets/images/villas/E2105-2.png";
+import E2105SF from "assets/images/villas/E2105-3.png";
+
+import E2400GF from "assets/images/villas/Elixir-east-villa-2400-5.png";
+import E2400FF from "assets/images/villas/Elixir-east-villa-2400-6.png";
+import E2400SF from "assets/images/villas/Elixir-east-villa-2400-7.png";
+
+import W1200GF from "assets/images/villas/W1200-1.png";
+import W1200FF from "assets/images/villas/W1200-2.png";
+import W1200SF from "assets/images/villas/W1200-3.png";
+
+import W1500GF from "assets/images/villas/W1500-1.png";
+import W1500FF from "assets/images/villas/W1500-2.png";
+import W1500SF from "assets/images/villas/W1500-3.png";
+
+import W2105GF from "assets/images/villas/W2105-1.png";
+import W2105FF from "assets/images/villas/W2105-2.png";
+import W2105SF from "assets/images/villas/W2105-3.png";
+
+import W2400GF from "assets/images/villas/Elixir-west-villa-2400-6.png";
+import W2400FF from "assets/images/villas/Elixir-west-villa-2400-7.png";
+import W2400SF from "assets/images/villas/Elixir-west-villa-2400-8.png";
+
 export const HeaderTabs = [
   { name: "Home", url: "/home" },
   { name: "Villas", url: "/villas" },
@@ -99,3 +131,244 @@ export const SpecificationsList = [
     value2: "",
   },
 ];
+
+export const VillasPages = (type: string) => {
+  switch (type) {
+    case "E1200":
+      return {
+        name: "EAST FACING VILLA",
+        description: [
+          "3-BHK + 1",
+          "PLOT AREA : 1200 sqft. (30’ x 40’)",
+          "TOTAL BUILT UP AREA : 2587 sqft.",
+        ],
+        imagesArr: [
+          {
+            image: E1200GF,
+            width: 320,
+            height: 552,
+            description: ["GROUND FLOOR PLAN", "AREA : 871 sqft."],
+          },
+          {
+            image: E1200FF,
+            width: 383,
+            height: 552,
+            description: ["FIRST FLOOR PLAN", "AREA : 851 sqft."],
+          },
+          {
+            image: E1200SF,
+            width: 383,
+            height: 552,
+            description: ["SECOND FLOOR PLAN", "AREA : 865 sqft."],
+          },
+        ],
+      };
+
+    case "E1500":
+      return {
+        name: "EAST FACING VILLA",
+        description: [
+          "3-BHK + 1",
+          "PLOT AREA : 1500 sqft. (30’ x 50’)",
+          "TOTAL BUILT UP AREA : 3285 sqft.",
+        ],
+        imagesArr: [
+          {
+            image: E1500GF,
+            width: 269,
+            height: 552,
+            description: ["GROUND FLOOR PLAN", "AREA : 1103 sqft."],
+          },
+          {
+            image: E1500FF,
+            width: 313,
+            height: 552,
+            description: ["FIRST FLOOR PLAN", "AREA : 1083 sqft."],
+          },
+          {
+            image: E1500SF,
+            width: 313,
+            height: 552,
+            description: ["SECOND FLOOR PLAN", "AREA : 1099 sqft."],
+          },
+        ],
+      };
+
+    case "E2105":
+      return {
+        name: "EAST FACING VILLA",
+        description: [
+          "3-BHK + 1",
+          "PLOT AREA : 2105 sqft. (35’ x 60’)",
+          "TOTAL BUILT UP AREA : 4515 sqft.",
+        ],
+        imagesArr: [
+          {
+            image: E2105GF,
+            width: 272,
+            height: 552,
+            description: ["GROUND FLOOR PLAN", "AREA : 1511 sqft."],
+          },
+          {
+            image: E2105FF,
+            width: 321,
+            height: 552,
+            description: ["FIRST FLOOR PLAN", "AREA : 1497 sqft."],
+          },
+          {
+            image: E2105SF,
+            width: 321,
+            height: 552,
+            description: ["SECOND FLOOR PLAN", "AREA : 1507 sqft."],
+          },
+        ],
+      };
+
+    case "E2400":
+      return {
+        name: "EAST FACING VILLA",
+        description: [
+          "3-BHK + 1",
+          "PLOT AREA : 2400 sqft. (40’ x 60’)",
+          "TOTAL BUILT UP AREA : 5286 sqft.",
+        ],
+        imagesArr: [
+          {
+            image: E2400GF,
+            width: 272,
+            height: 552,
+            description: ["GROUND FLOOR PLAN", "AREA : 1772 sqft."],
+          },
+          {
+            image: E2400FF,
+            width: 321,
+            height: 552,
+            description: ["FIRST FLOOR PLAN", "AREA : 1747 sqft."],
+          },
+          {
+            image: E2400SF,
+            width: 321,
+            height: 552,
+            description: ["SECOND FLOOR PLAN", "AREA : 1767 sqft."],
+          },
+        ],
+      };
+    case "W1200":
+      return {
+        name: "WEST FACING VILLA",
+        description: [
+          "4-BHK + 1",
+          "PLOT AREA : 1200 sqft. (30’ x 40’)",
+          "TOTAL BUILT UP AREA : 2588 sqft.",
+        ],
+        imagesArr: [
+          {
+            image: W1200GF,
+            width: 320,
+            height: 552,
+            description: ["GROUND FLOOR PLAN", "AREA : 871 sqft."],
+          },
+          {
+            image: W1200FF,
+            width: 390,
+            height: 552,
+            description: ["FIRST FLOOR PLAN", "AREA : 853 sqft."],
+          },
+          {
+            image: W1200SF,
+            width: 390,
+            height: 552,
+            description: ["SECOND FLOOR PLAN", "AREA : 864 sqft."],
+          },
+        ],
+      };
+    case "W1500":
+      return {
+        name: "WEST FACING VILLA",
+        description: [
+          "4-BHK + 1",
+          "PLOT AREA : 1500 sqft. (30’ x 50’)",
+          "TOTAL BUILT UP AREA : 3288 sqft.",
+        ],
+        imagesArr: [
+          {
+            image: W1500GF,
+            width: 271,
+            height: 552,
+            description: ["GROUND FLOOR PLAN", "AREA : 1103 sqft."],
+          },
+          {
+            image: W1500FF,
+            width: 308,
+            height: 552,
+            description: ["FIRST FLOOR PLAN", "AREA : 1082 sqft."],
+          },
+          {
+            image: W1500SF,
+            width: 308,
+            height: 552,
+            description: ["SECOND FLOOR PLAN", "AREA : 1103 sqft."],
+          },
+        ],
+      };
+
+    case "W2105":
+      return {
+        name: "WEST FACING VILLA",
+        description: [
+          "4-BHK + 1",
+          "PLOT AREA : 2105 sqft. (35’ x 60’)",
+          "TOTAL BUILT UP AREA : 4515 sqft.",
+        ],
+        imagesArr: [
+          {
+            image: W2105GF,
+            width: 272,
+            height: 552,
+            description: ["GROUND FLOOR PLAN", "AREA : 1510 sqft."],
+          },
+          {
+            image: W2105FF,
+            width: 325,
+            height: 552,
+            description: ["FIRST FLOOR PLAN", "AREA : 1498 sqft."],
+          },
+          {
+            image: W2105SF,
+            width: 325,
+            height: 552,
+            description: ["SECOND FLOOR PLAN", "AREA : 1507 sqft."],
+          },
+        ],
+      };
+    case "W2400":
+      return {
+        name: "WEST FACING VILLA",
+        description: [
+          "4-BHK + 1",
+          "PLOT AREA : 2400 sqft. (40’ x 60’)",
+          "TOTAL BUILT UP AREA : 5285 sqft.",
+        ],
+        imagesArr: [
+          {
+            image: W2400GF,
+            width: 307,
+            height: 552,
+            description: ["GROUND FLOOR PLAN", "AREA : 1772 sqft."],
+          },
+          {
+            image: W2400FF,
+            width: 375,
+            height: 552,
+            description: ["FIRST FLOOR PLAN", "AREA : 1747 sqft."],
+          },
+          {
+            image: W2400SF,
+            width: 375,
+            height: 552,
+            description: ["SECOND FLOOR PLAN", "AREA : 1767 sqft."],
+          },
+        ],
+      };
+  }
+};

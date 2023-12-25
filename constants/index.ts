@@ -30,6 +30,20 @@ import W2400GF from "assets/images/villas/Elixir-west-villa-2400-6.png";
 import W2400FF from "assets/images/villas/Elixir-west-villa-2400-7.png";
 import W2400SF from "assets/images/villas/Elixir-west-villa-2400-8.png";
 
+// Icons
+
+import FoundationIcon from "assets/icons/Foundation-Icon.svg";
+import Door from "assets/icons/Door.svg";
+import Wall from "assets/icons/Wall.svg";
+import Windows from "assets/icons/Window.svg";
+import Flooring from "assets/icons/Flooring.svg";
+import Electrical from "assets/icons/Electrical.svg";
+import Sanitary from "assets/icons/sanitary.svg";
+import Kitchen from "assets/icons/kitchen.svg";
+import Water from "assets/icons/Water.svg";
+import CCTV from "assets/icons/CCTV.svg";
+import Telecom from "assets/icons/Telecom.svg";
+
 export const HeaderTabs = [
   { name: "Home", url: "/home" },
   { name: "Villas", url: "/villas" },
@@ -59,12 +73,14 @@ export const FooterInfo = [
 export const SpecificationsList = [
   {
     title: "Foundation and structure",
+    icon: FoundationIcon,
     value1: "RCC frame structure.",
     value2:
       "The superstructure, comprised of solid blocks, features 8'' thick external walls and 6'' thick internal walls.",
   },
   {
     title: "Wall finishes",
+    icon: Wall,
     value1:
       "The internal wall finishes feature a smooth plastered surface treated with putty and painted with premier quality acrylic emulsion paint of reputed make.",
     value2:
@@ -72,6 +88,7 @@ export const SpecificationsList = [
   },
   {
     title: "Doors",
+    icon: Door,
     value1:
       "The main door and internal doors feature an engineered wood frame with a veneer shutter, finished in melamine polish, and fitted with hardware of reputed make.",
     value2:
@@ -79,12 +96,14 @@ export const SpecificationsList = [
   },
   {
     title: "Windows",
+    icon: Windows,
     value1:
       "The windows are designed with UPVC sliding shutters, complete with mosquito mesh and safety grills.",
     value2: "",
   },
   {
     title: "Flooring and cladding",
+    icon: Flooring,
     value1:
       "The foyer, living, and dining areas have imported marble flooring. The bedrooms and kitchen feature vitrified tile flooring. The sit-out and balconies are tiled with anti-skid ceramics.",
     value2:
@@ -92,6 +111,7 @@ export const SpecificationsList = [
   },
   {
     title: "Electrical",
+    icon: Electrical,
     value1:
       "3 phase power supply with MCB’s of reputed make. Concealed copper wiring of reputed make. Modular switches of reputed make.",
     value2:
@@ -99,12 +119,14 @@ export const SpecificationsList = [
   },
   {
     title: "CP and sanitary fittings",
+    icon: Sanitary,
     value1:
       "Sanitary fixtures and CP fittings are provided by Vitra or equivalent brand. Geysers/solar provision is available in all bathrooms.",
     value2: "",
   },
   {
     title: "Kitchen and utility",
+    icon: Kitchen,
     value1:
       "Treated water connection with a provision for a water purifier, along with inlets and outlets for the kitchen sink. Additionally, there is a provision for a washing machine and a stainless steel single-bowl sink with a granite counter.",
     value2: "",
@@ -112,6 +134,7 @@ export const SpecificationsList = [
 
   {
     title: "Water supply",
+    icon: Water,
     value1:
       "Treated water connection with a provision for a water purifier, along with inlets and outlets for the kitchen sink. Additionally, there is a provision for a washing machine and a stainless steel single-bowl sink with a granite counter.",
     value2: "",
@@ -119,6 +142,7 @@ export const SpecificationsList = [
 
   {
     title: "CCTV",
+    icon: CCTV,
     value1:
       "CCTV surveillance is installed at the project entry and exit points. Each unit is equipped with a standalone video door phone from a reputed brand",
     value2: "",
@@ -126,6 +150,7 @@ export const SpecificationsList = [
 
   {
     title: "Telecom and internet",
+    icon: Telecom,
     value1:
       "An intercom point is located in the living room, while internet points are available in both the living and drawing rooms on the first floor.",
     value2: "",

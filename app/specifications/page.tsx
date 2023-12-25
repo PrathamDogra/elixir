@@ -29,14 +29,31 @@ const Specification = () => {
         {SpecificationsList.map((spec, index) => {
           return (
             <div className={styles.accordionSection}>
-              <div>
-                <div
-                  className={styles.specTitle}
-                  onClick={() => handleTitleClick(index)}
-                >
-                  {spec.title}
+              <div className={styles.titleSection}>
+                <div className={styles.title}>
+                  <Image src={spec?.icon} width={20} height={20} alt="" />
+                  <div
+                    className={styles.specTitle}
+                    onClick={() => handleTitleClick(index)}
+                  >
+                    {spec.title}
+                  </div>
                 </div>
-                
+                {currentIndex === index ? (
+                  <Image
+                    className={styles.openIcon}
+                    src={MinusIcon}
+                    alt=""
+                    onClick={() => handleTitleClick(index)}
+                  />
+                ) : (
+                  <Image
+                    className={styles.openIcon}
+                    src={PlusIcon}
+                    alt=""
+                    onClick={() => handleTitleClick(index)}
+                  />
+                )}
               </div>
               <div
                 className={cn(styles.specValueSection, {

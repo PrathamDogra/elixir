@@ -25,12 +25,10 @@
 
   .navMenu {
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
     align-items: center;
 
     .navItem {
-      margin-left: 5rem;
-
       .navLink {
         font-size: 22px;
         font-style: normal;
@@ -69,6 +67,19 @@
         }
       }
     }
+  }
+
+  .enquireBtn {
+    @include btn-class;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #22401e;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.44px;
   }
 }
 

@@ -7,6 +7,7 @@ import ElixirLogo from "assets/images/ELIXIR.png";
 import Link from "next/link";
 import { HeaderTabs } from "../../constants";
 import Image from "next/image";
+import MailIcon from "assets/icons/Mail.svg";
 import { usePathname } from "next/navigation";
 
 interface IHeader {
@@ -63,6 +64,10 @@ const Header = ({ customClass = "" }: IHeader) => {
             );
           })}
         </ul>
+        <button type="button" className={styles.enquireBtn}>
+          <Image src={MailIcon} width={20} height={20} alt="" />
+          Enquire now
+        </button>
         <div className={cn(styles.hamburger, { [styles.active]: isMobile })}>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>

@@ -3,6 +3,9 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import styles from "./index.module.scss";
 import { useState } from "react";
+import PlusIcon from "assets/icons/Plus-Icon.svg";
+import MinusIcon from "assets/icons/Minus-Icon.svg";
+import Image from "next/image";
 import { SpecificationsList } from "../../constants";
 import cn from "classnames";
 
@@ -26,11 +29,14 @@ const Specification = () => {
         {SpecificationsList.map((spec, index) => {
           return (
             <div className={styles.accordionSection}>
-              <div
-                className={styles.specTitle}
-                onClick={() => handleTitleClick(index)}
-              >
-                {spec.title}
+              <div>
+                <div
+                  className={styles.specTitle}
+                  onClick={() => handleTitleClick(index)}
+                >
+                  {spec.title}
+                </div>
+                
               </div>
               <div
                 className={cn(styles.specValueSection, {

@@ -372,3 +372,41 @@ export const VillasPages = (type: string) => {
       };
   }
 };
+
+export const EastFacingVllas = [
+  {
+    text: "1200 sqft",
+    id: "E1200",
+  },
+  {
+    text: "1500 sqft",
+    id: "E1500",
+  },
+  {
+    text: "2105 sqft",
+    id: "E2105",
+  },
+  {
+    text: "2400 sqft",
+    id: "E2400",
+  },
+];
+
+export const WestFacingVillas = [
+  {
+    text: "1200 sqft",
+    id: "W1200",
+  },
+  {
+    text: "1500 sqft",
+    id: "W1500",
+  },
+  {
+    text: "2105 sqft",
+    id: "W2105",
+  },
+  {
+    text: "2400 sqft",
+    id: "W2400",
+  },
+];

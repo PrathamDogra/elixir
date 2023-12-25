@@ -3,14 +3,17 @@ import Image from "next/image";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import PlayIcon from "assets/icons/play.svg";
+import PlayIconWhite from "assets/icons/play-white.svg";
 import styles from "./index.module.scss";
-import cn from "classnames";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "react-slick";
+import { useRouter } from "next/navigation";
 import MasterPlan from "assets/images/masterplan.png";
 import AssetImage from "assets/images/Elixir-east-villa.png";
+import { EastFacingVllas, WestFacingVillas } from "../../constants";
 
 const Villas = () => {
+  const router = useRouter();
   const settings = {
     dots: true,
     // infinite: true,
@@ -27,6 +30,10 @@ const Villas = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const handleClickOnVillas = (id: string) => {
+    router.push(`/villas/${id}`);
   };
 
   return (
@@ -47,11 +54,42 @@ const Villas = () => {
         <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
         <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
       </button>
-      <Slider {...settings} className="slick-slider">
-        <div className={styles.slide}>
-          <Image src={AssetImage} width={436} height={195} alt="" />
+      <div className={styles.header}>EAST FACING VILLAS</div>
+      <div className={styles.slidesContainer}>
+        {EastFacingVllas?.map((villa) => (
+          <div className={styles.slide}>
+            <div className={styles.text}>{villa.text}</div>
+            <button
+              type="button"
+              className={styles.exploreBtn}
+              onClick={() => handleClickOnVillas(villa?.id)}
+            >
+              explore plans
+              <Image src={PlayIconWhite} width={6} height={11} alt="" />
+              <Image src={PlayIconWhite} width={6} height={11} alt="" />
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className={styles.container}>
+        <div className={styles.headerWest}>WEST FACING VILLAS</div>
+        <div className={styles.slidesContainer}>
+          {WestFacingVillas?.map((villa) => (
+            <div className={styles.slide}>
+              <div className={styles.text}>{villa.text}</div>
+              <button
+                type="button"
+                className={styles.exploreBtn}
+                onClick={() => handleClickOnVillas(villa?.id)}
+              >
+                explore plans
+                <Image src={PlayIconWhite} width={6} height={11} alt="" />
+                <Image src={PlayIconWhite} width={6} height={11} alt="" />
+              </button>
+            </div>
+          ))}
         </div>
-      </Slider>
+      </div>
       <div className={styles.headingSection}>
         <div className={styles.heading}>MASTERPLAN</div>
         <div className={styles.subHeading}>

@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import MasterPlan from "assets/images/masterplan.png";
 import AssetImage from "assets/images/Elixir-east-villa.png";
 import { EastFacingVllas, WestFacingVillas } from "../../constants";
+import Link from "next/link";
 
 const Villas = () => {
   const router = useRouter();
@@ -20,16 +21,6 @@ const Villas = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-  };
-
-  const handleDownloadPDF = () => {
-    const pdfUrl = "Sample.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "document.pdf"; // specify the filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   const handleClickOnVillas = (id: string) => {
@@ -49,11 +40,13 @@ const Villas = () => {
           living to new heights.
         </div>
       </div>
-      <button className={styles.download} onClick={handleDownloadPDF}>
-        DOWNLOAD BROCHHURE
-        <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
-        <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
-      </button>
+      <Link href="/assets/Elixir.pdf" download target="_blank">
+        <button className={styles.download}>
+          DOWNLOAD BROCHHURE
+          <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
+          <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
+        </button>
+      </Link>
       <div className={styles.header}>EAST FACING VILLAS</div>
       <div className={styles.slidesContainer}>
         {EastFacingVllas?.map((villa) => (

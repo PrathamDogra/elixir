@@ -3,6 +3,7 @@ import Footer from "components/Footer";
 import styles from "./index.module.scss";
 import Image from "next/image";
 import ESRImg from "assets/images/Elixir_7-5.png";
+import Link from "next/link";
 
 const Amenities = () => {
   return (
@@ -21,7 +22,9 @@ const Amenities = () => {
       </div>
       <div className={styles.imageSection}>
         <div className={styles.btnContainer}>
-          <button className={styles.downloadBtn}>DOWNLOAD BROCHHURE</button>
+          <Link href="/assets/Elixir.pdf" download target="_blank">
+            <button className={styles.downloadBtn}>DOWNLOAD BROCHHURE</button>
+          </Link>
         </div>
         <div className={styles.bgImage}></div>
       </div>

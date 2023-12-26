@@ -5,7 +5,7 @@ import styles from "./index.module.scss";
 import DSRLogo from "assets/images/DSR-logo.png";
 import ElixirLogo from "assets/images/ELIXIR.png";
 import Link from "next/link";
-import { HeaderTabs } from "../../constants";
+import { HeaderTabs, email } from "../../constants";
 import Image from "next/image";
 import MailIcon from "assets/icons/Mail.svg";
 import { usePathname } from "next/navigation";
@@ -64,10 +64,10 @@ const Header = ({ customClass = "" }: IHeader) => {
             );
           })}
         </ul>
-        <button type="button" className={styles.enquireBtn}>
+        <Link href={`mailto:${email}`} className={styles.enquireBtn}>
           <Image src={MailIcon} width={20} height={20} alt="" />
           Enquire now
-        </button>
+        </Link>
         <div className={cn(styles.hamburger, { [styles.active]: isMobile })}>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>

@@ -5,29 +5,22 @@ import Footer from "components/Footer";
 import PlayIcon from "assets/icons/play.svg";
 import PlayIconWhite from "assets/icons/play-white.svg";
 import styles from "./index.module.scss";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useRouter } from "next/navigation";
 import MasterPlan from "assets/images/masterplan.png";
+import DownloadIcon from "assets/icons/DownIcon.svg";
 import { EastFacingVllas, WestFacingVillas } from "../../constants";
 import Link from "next/link";
 import cn from "classnames";
 
 const Villas = () => {
   const router = useRouter();
-  const settings = {
-    dots: true,
-    // infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
 
   const handleClickOnVillas = (id: string) => {
     router.push(`/villas/${id}`);
   };
 
   return (
-    <div className={"page-container"}>
+    <div className={cn("page-container")}>
       <Header />
       <div className={styles.headingSection}>
         <div className={styles.heading}>Experience elevated urban living</div>
@@ -39,12 +32,17 @@ const Villas = () => {
           living to new heights.
         </div>
       </div>
-      <Link href="/assets/Elixir.pdf" download target="_blank">
-        <button className={styles.download}>
-          DOWNLOAD BROCHHURE
-          <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
-          <Image src={PlayIcon} width={4.5} height={8.5} alt="" />
-        </button>
+      <Link
+        href="/assets/Elixir.pdf"
+        download
+        target="_blank"
+        className={styles.download}
+      >
+        <p>DOWNLOAD BROCHHURE</p>
+        <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+          <Image src={DownloadIcon} alt="" width={11} height={6} />
+          <Image src={DownloadIcon} alt="" width={11} height={6} />
+        </div>
       </Link>
       <div className={styles.header}>EAST FACING VILLAS</div>
       <div className={styles.slidesContainer}>

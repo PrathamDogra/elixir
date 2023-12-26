@@ -2,6 +2,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 import styles from "./index.module.scss";
 import Image from "next/image";
+import DownloadIcon from "assets/icons/DownIcon.svg";
 import ESRImg from "assets/images/Elixir_7-5.png";
 import Link from "next/link";
 
@@ -22,8 +23,19 @@ const Amenities = () => {
       </div>
       <div className={styles.imageSection}>
         <div className={styles.btnContainer}>
-          <Link href="/assets/Elixir.pdf" download target="_blank">
-            <button className={styles.downloadBtn}>DOWNLOAD BROCHHURE</button>
+          <Link
+            href="/assets/Elixir.pdf"
+            download
+            target="_blank"
+            className={styles.downloadBtn}
+          >
+            <p>DOWNLOAD BROCHHURE</p>
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "2px" }}
+            >
+              <Image src={DownloadIcon} alt="" width={11} height={6} />
+              <Image src={DownloadIcon} alt="" width={11} height={6} />
+            </div>
           </Link>
         </div>
         <div className={styles.bgImage}></div>

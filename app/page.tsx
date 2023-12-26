@@ -1,8 +1,7 @@
 "use client";
 import Header from "components/Header";
 import Image from "next/image";
-import Elixir from "assets/images/elixir-home.png";
-import HomeImage from "assets/images/home-image-1.jpeg";
+import Link from "next/link";
 import PlayIcon from "assets/icons/play.svg";
 import Footer from "components/Footer";
 import styles from "./index.module.scss";
@@ -12,6 +11,7 @@ import RightIcon from "assets/icons/RightArrow.svg";
 import HomeIcon from "assets/icons/HomeIcon.svg";
 import TrainIcon from "assets/icons/TrainIcon.svg";
 import cn from "classnames";
+import { phoneNumber } from "../constants";
 import { useRouter } from "next/navigation";
 
 const HomePage = () => {
@@ -49,9 +49,9 @@ const HomePage = () => {
         <div className={styles.rightImage} />
       </div>
       <div className={styles.whatsAppContainer}>
-        <button type="button" className={styles.whatsAppBtn}>
+        <Link href={`tel:${phoneNumber}`} className={styles.whatsAppBtn}>
           <Image src={WhatsApp} width={40} height={40} alt="" />
-        </button>
+        </Link>
       </div>
       <div className={styles.exploreSection}>
         <div className={styles.heading}>
@@ -67,7 +67,11 @@ const HomePage = () => {
             <div className={styles["explore_1_greenText"]}>
               Ready to experience the extraordinary?
             </div>
-            <button type="button" className={styles["explore_villas_btn"]}>
+            <button
+              type="button"
+              className={styles["explore_villas_btn"]}
+              onClick={() => router.push("/villas")}
+            >
               Explore villas
               <Image src={RightIcon} width={20} height={20} alt="" />
             </button>
@@ -118,19 +122,27 @@ const HomePage = () => {
             Carefully curated amenities for a lifestyle beyond ordinary.
           </div>
         </div>
-        <button type="button" className={styles.exploreBtn}>
+        <button
+          type="button"
+          className={styles.exploreBtn}
+          onClick={() => router.push("/amenities")}
+        >
           Explore amenities
           <Image src={RightIcon} width={20} height={20} alt="" />
         </button>
       </div>
-      <div className={styles.ourLocationSection}>
+      <div className={styles.ourLocationSection} id="location">
         <div className={styles.ourLocation}>Our location</div>
         <div className={styles.mapImage}></div>
-        <button type="button" className={styles.viewBtn}>
+        <Link
+          href={"https://maps.app.goo.gl/XVjPCCEVAQWr7Hyo9?g_st=iw"}
+          className={styles.viewBtn}
+          target="_blank"
+        >
           VIEW ON GOOGLE MAPS
           <Image src={PlayIcon} width={6} height={10} alt="" />
           <Image src={PlayIcon} width={6} height={10} alt="" />
-        </button>
+        </Link>
       </div>
       <Footer />
     </div>

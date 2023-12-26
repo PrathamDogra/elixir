@@ -49,7 +49,7 @@ export const HeaderTabs = [
   { name: "Villas", url: "/villas" },
   { name: "Amenities", url: "/amenities" },
   { name: "Specifications", url: "/specifications" },
-  { name: "Location", url: "/location" },
+  { name: "Location", url: "/#location" },
 ];
 
 export const FooterInfo = [
@@ -435,3 +435,7 @@ export const WestFacingVillas = [
     id: "W2400",
   },
 ];
+
+export const email = "sales.elixir@dsrinfra.com";
+
+export const phoneNumber = "+91 99455 36006";

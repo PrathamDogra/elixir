@@ -56,29 +56,98 @@
     max-width: 1200px;
     max-height: 980px;
   }
+}
 
-  .bgImage2 {
+.imageSection1 {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  min-width: 1200px;
+
+  .bgImage1 {
     background-image: url("../../assets/images/ElixirAmneties.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 90vw;
     height: 100vh;
-    max-width: 1200px;
+    min-width: 1200px;
+    max-height: 980px;
+  }
+
+  .bgImage2 {
+    background-image: url("../../assets/images/Elixir_clubhouse-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90vw;
+    height: 100vh;
+    min-width: 1200px;
+    max-height: 980px;
+  }
+
+  .bgImage3 {
+    background-image: url("../../assets/images/Elixir_clubhouse-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90vw;
+    height: 100vh;
+    min-width: 1200px;
+    max-height: 980px;
+  }
+
+  .bgImage4 {
+    background-image: url("../../assets/images/Elixir_clubhouse-3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90vw;
+    height: 100vh;
+    min-width: 1200px;
     max-height: 980px;
   }
 }
 
 .cardsSection {
-  width: 110vw;
+  display: flex;
+  width: 90vw;
   height: 80vh;
   background-color: #7a8c51;
+  padding: 50px;
+  margin-top: 50px;
+
   .heading {
     color: #fff;
     text-align: justify;
-    font-size: 48px;
+    font-size: 40px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 60px;
     letter-spacing: -0.96px;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      border-radius: 16px;
+      background: rgba(34, 64, 30, 0.5);
+      width: 275px;
+      height: 313px;
+
+      .text {
+        color: #fcfbfa;
+        text-align: center;
+        font-size: 25.6px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
   }
 }

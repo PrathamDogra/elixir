@@ -44,6 +44,15 @@ import Water from "assets/icons/Water.svg";
 import CCTV from "assets/icons/CCTV.svg";
 import Telecom from "assets/icons/Telecom.svg";
 
+// Icons Clubhouse
+
+import BanquetIcon from "assets/icons/clubhouse/banquet.svg";
+import GymIcon from "assets/icons/clubhouse/gym.svg";
+import IndoorIcon from "assets/icons/clubhouse/indoor.svg";
+import YogaIcon from "assets/icons/clubhouse/yoga.svg";
+import LibraryIcon from "assets/icons/clubhouse/library.svg"
+import MultiIcon from "assets/icons/clubhouse/multi.svg";
+
 export const HeaderTabs = [
   { name: "Home", url: "/" },
   { name: "Villas", url: "/villas" },
@@ -439,3 +448,30 @@ export const WestFacingVillas = [
 export const email = "sales.elixir@dsrinfra.com";
 
 export const phoneNumber = "+91 99455 36006";
+
+export const clubhouseAmenities = [
+  {
+    text: "Gymnasium",
+    icon: GymIcon
+  },
+  {
+    text: "Yoga & meditation hall",
+    icon: YogaIcon
+  },
+  {
+    text: "Indoor games",
+    icon: IndoorIcon
+  },
+  {
+    text: "Library",
+    icon: LibraryIcon
+  },
+  {
+    text: "Multi-purpose hall",
+    icon: MultiIcon
+  },
+  {
+    text: "Banquet lawns",
+    icon: BanquetIcon
+  },
+];

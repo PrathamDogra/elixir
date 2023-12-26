@@ -4,6 +4,7 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 import DownloadIcon from "assets/icons/DownIcon.svg";
 import ESRImg from "assets/images/Elixir_7-5.png";
+import { clubhouseAmenities } from "../../constants";
 import Link from "next/link";
 
 const Amenities = () => {
@@ -43,13 +44,15 @@ const Amenities = () => {
 
       <div className={styles.cardsSection}>
         <div className={styles.heading}>CLUBHOUSE AMENITIES</div>
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className={styles.cards}>
+          {clubhouseAmenities?.map((item) => {
+            return (
+              <div className={styles.card}>
+                <Image src={item?.icon} alt="" />
+                <div className={styles.text}>{item?.text}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className={styles.headingSection}>
@@ -62,8 +65,11 @@ const Amenities = () => {
           for adults, our outdoor amenities promise a plethora of activities.
         </div>
       </div>
-      <div className={styles.imageSection}>
+      <div className={styles.imageSection1}>
+        <div className={styles.bgImage1}></div>
         <div className={styles.bgImage2}></div>
+        <div className={styles.bgImage3}></div>
+        <div className={styles.bgImage4}></div>
       </div>
       <Footer />
     </div>

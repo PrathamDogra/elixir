@@ -50,7 +50,7 @@ const HomePage = () => {
       </div>
       <div className={styles.whatsAppContainer}>
         <Link href={`tel:${phoneNumber}`} className={styles.whatsAppBtn}>
-          <Image src={WhatsApp} width={40} height={40} alt="" />
+          <Image src={WhatsApp} width={36} height={36} alt="" />
         </Link>
       </div>
       <div className={styles.exploreSection}>

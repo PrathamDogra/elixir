@@ -14,7 +14,6 @@ import Image9 from "assets/images/gallary/Elixir_18-1.png";
 import Image10 from "assets/images/gallary/Elixir_19-1.png";
 import Image11 from "assets/images/gallary/Elixir_20.png";
 import Image12 from "assets/images/gallary/Elixir_21.png";
-import cn from "classnames";
 import { useRouter } from "next/navigation";
 
 const Gallary = () => {

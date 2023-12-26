@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -14,6 +15,28 @@ import cn from "classnames";
 
 const Villas = () => {
   const router = useRouter();
+  const [screenWidth, setScreenWidth] = useState<Number>(0);
+
+  useEffect(() => {
+    const updateScreenWidth = () => {
+      if (typeof window !== "undefined") {
+        setScreenWidth(window.innerWidth);
+      }
+    };
+
+    // Initial screen width on mount
+    updateScreenWidth();
+
+    // Event listener for screen width changes
+    if (typeof window !== "undefined")
+      window.addEventListener("resize", updateScreenWidth);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      if (typeof window !== "undefined")
+        window.removeEventListener("resize", updateScreenWidth);
+    };
+  }, []);
 
   const handleClickOnVillas = (id: string) => {
     router.push(`/villas/${id}`);
@@ -88,7 +111,12 @@ const Villas = () => {
           community hub.
         </div>
       </div>
-      <Image src={MasterPlan} width={1232} height={708} alt="map" />
+      {(screenWidth as number) < 767 ? (
+        <Image src={MasterPlan} width={360} height={207} alt="map" />
+      ) : (
+        <Image src={MasterPlan} width={1232} height={708} alt="map" />
+      )}
+
       <Footer />
     </div>
   );

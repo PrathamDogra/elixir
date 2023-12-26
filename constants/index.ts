@@ -45,7 +45,7 @@ import CCTV from "assets/icons/CCTV.svg";
 import Telecom from "assets/icons/Telecom.svg";
 
 export const HeaderTabs = [
-  { name: "Home", url: "/home" },
+  { name: "Home", url: "/" },
   { name: "Villas", url: "/villas" },
   { name: "Amenities", url: "/amenities" },
   { name: "Specifications", url: "/specifications" },

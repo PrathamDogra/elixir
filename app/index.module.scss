@@ -54,7 +54,7 @@
   margin: 50px 0;
 
   .leftImage {
-    background-image: url("../../assets/images/home-image-1.jpeg");
+    background-image: url("../assets/images/home-image-1.jpeg");
     background-position: center;
     width: 815px;
     height: 652px;
@@ -63,7 +63,7 @@
   }
 
   .rightImage {
-    background-image: url("../../assets/images/elixir-home.png");
+    background-image: url("../assets/images/elixir-home.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,7 +116,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
-    background-image: url("../../assets/images/map.png");
+    background-image: url("../assets/images/map.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 70%;

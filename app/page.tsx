@@ -9,6 +9,8 @@ import styles from "./index.module.scss";
 import Map from "assets/images/map.png";
 import WhatsApp from "assets/icons/WhatsAppIcon.svg";
 import RightIcon from "assets/icons/RightArrow.svg";
+import HomeIcon from "assets/icons/HomeIcon.svg";
+import TrainIcon from "assets/icons/TrainIcon.svg";
 import cn from "classnames";
 import { useRouter } from "next/navigation";
 
@@ -55,16 +57,56 @@ const HomePage = () => {
         <div className={styles.heading}>
           Experience unparalleled living in our exquisitely designed villas.
         </div>
-        <div>
-          <div>
-            <div>
+        <div className={styles.explore}>
+          <div className={styles["explore_1"]}>
+            <div className={styles["explore_1_text"]}>
               Ultra luxurious villas where the design seamlessly blends harmony
               and rhythm, transforming our villas into an oasis of tranquility
               and calmness.
             </div>
-            <div>Ready to experience the extraordinary?</div>
+            <div className={styles["explore_1_greenText"]}>
+              Ready to experience the extraordinary?
+            </div>
+            <button type="button" className={styles["explore_villas_btn"]}>
+              Explore villas
+              <Image src={RightIcon} width={20} height={20} alt="" />
+            </button>
           </div>
-          <div></div>
+          <div className={styles["explore_2"]}>
+            <div className={styles["villas_1"]}>
+              <div className={styles["villas_text"]}>EAST FACING VILLAS</div>
+            </div>
+            <div className={styles["villas_2"]}>
+              <div className={styles["villas_text"]}>WEST FACING VILLAS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.middleSection}>
+        <div className={styles["middleSection_1"]}>
+          <Image src={TrainIcon} alt="" />
+          <div className={styles.textSection}>
+            <div className={styles["textSection_1"]}>10 MIN DRIVE FROM</div>
+            <div className={styles["textSection_2"]}>KADUGOI METRO STATION</div>
+          </div>
+        </div>
+        <div className={styles["middleSection_2"]}>
+          <Image src={HomeIcon} alt="" />
+          <div className={styles.textSection}>
+            <div className={styles["textSection_1"]}>10 MIN DRIVE FROM</div>
+            <div className={styles["textSection_2"]}>KADUGOI METRO STATION</div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.playSection}>
+        <div className={styles["playSection_1"]}>
+          <div className={styles.sectionText}>PLAY ZONE</div>
+        </div>
+        <div className={styles["playSection_2"]}>
+          <div className={styles.sectionText}>RECREATION ZONE</div>
+        </div>
+        <div className={styles["playSection_3"]}>
+          <div className={styles.sectionText}>FITNESS ZONE</div>
         </div>
       </div>
       <div className={styles.amnetiesSection}>

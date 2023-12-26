@@ -6,12 +6,11 @@ import PlayIcon from "assets/icons/play.svg";
 import PlayIconWhite from "assets/icons/play-white.svg";
 import styles from "./index.module.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Slider from "react-slick";
 import { useRouter } from "next/navigation";
 import MasterPlan from "assets/images/masterplan.png";
-import AssetImage from "assets/images/Elixir-east-villa.png";
 import { EastFacingVllas, WestFacingVillas } from "../../constants";
 import Link from "next/link";
+import cn from "classnames";
 
 const Villas = () => {
   const router = useRouter();
@@ -68,7 +67,7 @@ const Villas = () => {
         <div className={styles.headerWest}>WEST FACING VILLAS</div>
         <div className={styles.slidesContainer}>
           {WestFacingVillas?.map((villa) => (
-            <div className={styles.slide}>
+            <div className={cn(styles.slide, styles.westSide)}>
               <div className={styles.text}>{villa.text}</div>
               <button
                 type="button"

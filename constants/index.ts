@@ -50,8 +50,15 @@ import BanquetIcon from "assets/icons/clubhouse/banquet.svg";
 import GymIcon from "assets/icons/clubhouse/gym.svg";
 import IndoorIcon from "assets/icons/clubhouse/indoor.svg";
 import YogaIcon from "assets/icons/clubhouse/yoga.svg";
-import LibraryIcon from "assets/icons/clubhouse/library.svg"
+import LibraryIcon from "assets/icons/clubhouse/library.svg";
 import MultiIcon from "assets/icons/clubhouse/multi.svg";
+
+// Icons HamburgerMenu
+
+import AmenitiesIcon from "assets/icons/amenitiesIcon.svg";
+import LocationIcon from "assets/icons/location.svg";
+import VillasIcon from "assets/icons/villasIcon.svg";
+import SpecsIcon from "assets/icons/specifications.svg";
 
 export const HeaderTabs = [
   { name: "Home", url: "/" },
@@ -59,6 +66,13 @@ export const HeaderTabs = [
   { name: "Amenities", url: "/amenities" },
   { name: "Specifications", url: "/specifications" },
   { name: "Location", url: "/#location" },
+];
+
+export const mobileHeaderTabs = [
+  { name: "Villas", url: "/villas", icon: VillasIcon },
+  { name: "Amenities", url: "/amenities", icon: AmenitiesIcon },
+  { name: "Specifications", url: "/specifications", icon: SpecsIcon },
+  { name: "Location", url: "/#location", icon: LocationIcon },
 ];
 
 export const FooterInfo = [
@@ -452,26 +466,26 @@ export const phoneNumber = "+91 99455 36006";
 export const clubhouseAmenities = [
   {
     text: "Gymnasium",
-    icon: GymIcon
+    icon: GymIcon,
   },
   {
     text: "Yoga & meditation hall",
-    icon: YogaIcon
+    icon: YogaIcon,
   },
   {
     text: "Indoor games",
-    icon: IndoorIcon
+    icon: IndoorIcon,
   },
   {
     text: "Library",
-    icon: LibraryIcon
+    icon: LibraryIcon,
   },
   {
     text: "Multi-purpose hall",
-    icon: MultiIcon
+    icon: MultiIcon,
   },
   {
     text: "Banquet lawns",
-    icon: BanquetIcon
+    icon: BanquetIcon,
   },
 ];

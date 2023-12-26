@@ -5,8 +5,11 @@ import styles from "./index.module.scss";
 import DSRLogo from "assets/images/DSR-logo.png";
 import ElixirLogo from "assets/images/ELIXIR.png";
 import Link from "next/link";
-import { HeaderTabs, email } from "../../constants";
+import { HeaderTabs, email, mobileHeaderTabs } from "../../constants";
 import Image from "next/image";
+import CrossIcon from "assets/icons/CrossRounded.svg";
+import Hamburger from "assets/icons/hamburger.svg";
+
 import MailIcon from "assets/icons/Mail.svg";
 import { usePathname } from "next/navigation";
 
@@ -15,8 +18,8 @@ interface IHeader {
 }
 
 const Header = ({ customClass = "" }: IHeader) => {
-  const [isMobile, setIsMobile] = useState(false);
   const [screenWidth, setScreenWidth] = useState<Number>(0);
+  const [openHamburger, setOpenHamburger] = useState<boolean>(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -43,37 +46,67 @@ const Header = ({ customClass = "" }: IHeader) => {
   return (
     <header className={cn(styles.header, customClass)}>
       <nav className={styles.navbar}>
-        <Link href="#" className={styles.navbarLogo}>
+        <Link href="/" className={styles.navbarLogo}>
           <Image src={DSRLogo} alt="DSR" width={82} height={24} />
           <div className={styles["vertical-line"]}></div>
           <Image src={ElixirLogo} alt="Elixir" width={55} height={20} />
         </Link>
-        <ul className={styles.navMenu}>
-          {HeaderTabs?.map((tab, index) => {
-            return (
-              <li className={styles.navItem} key={index}>
-                <Link
-                  href={tab.url}
-                  className={cn(styles.navLink, {
-                    [styles.selected]: pathname === tab.url,
-                  })}
-                >
-                  {tab.name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-        <Link href={`mailto:${email}`} className={styles.enquireBtn}>
-          <Image src={MailIcon} width={20} height={20} alt="" />
-          Enquire now
-        </Link>
-        <div className={cn(styles.hamburger, { [styles.active]: isMobile })}>
-          <span className={styles.bar}></span>
-          <span className={styles.bar}></span>
-          <span className={styles.bar}></span>
-        </div>
+        {!((screenWidth as number) < 767) && (
+          <>
+            <ul className={styles.navMenu}>
+              {HeaderTabs?.map((tab, index) => {
+                return (
+                  <li className={styles.navItem} key={index}>
+                    <Link
+                      href={tab.url}
+                      className={cn(styles.navLink, {
+                        [styles.selected]: pathname === tab.url,
+                      })}
+                    >
+                      {tab.name}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <Link href={`mailto:${email}`} className={styles.enquireBtn}>
+              <Image src={MailIcon} width={20} height={20} alt="" />
+              Enquire now
+            </Link>
+          </>
+        )}
+        {(screenWidth as number) < 767 && (
+          <Image
+            src={Hamburger}
+            alt=""
+            className={styles.burger}
+            onClick={() => setOpenHamburger(true)}
+          />
+        )}
       </nav>
+      <div
+        className={cn(styles.menuContainer, { [styles.open]: openHamburger })}
+      >
+        <Image
+          src={CrossIcon}
+          alt=""
+          className={styles.closeIcon}
+          width={18}
+          height={18}
+          onClick={() => setOpenHamburger(false)}
+        />
+        <div className={styles.menuHeader}>MENU</div>
+        <div className={styles.menuList}>
+          {mobileHeaderTabs?.map((headerItem) => (
+            <Link href={headerItem.url} className={styles.menuItem}>
+              <div className={styles.circularIcon}>
+                <Image src={headerItem?.icon} alt="" width={9} height={9} />
+              </div>
+              <div>{headerItem.name}</div>
+            </Link>
+          ))}
+        </div>
+      </div>
     </header>
   );
 };

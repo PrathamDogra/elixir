@@ -300,16 +300,28 @@
   flex-direction: column;
   gap: 36px;
   padding: 40px 20px;
+
+  @include mobile {
+    gap: 20px;
+  }
   .text {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include mobile {
+      gap: 10px;
+    }
     .amnetiesHeader {
       color: #8c6542;
       font-size: 40px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+
+      @include mobile {
+        font-size: 36px;
+      }
     }
 
     .amnetiesText {
@@ -317,8 +329,12 @@
       font-size: 28px;
       font-style: normal;
       font-weight: 300;
-      line-height: 16px;
+      line-height: normal;
       letter-spacing: -0.56px;
+
+      @include mobile {
+        font-size: 20px;
+      }
     }
   }
 
@@ -345,16 +361,15 @@
   height: 640px;
 
   @include mobile {
+    height: 950px;
     flex-direction: column;
-
-
     &_1 {
-      flex: none;
+      flex: none !important;
       height: 500px;
     }
 
     &_2 {
-      flex: none;
+      flex: none !important;
       height: 500px;
     }
   }
@@ -404,6 +419,12 @@
   width: 100%;
   gap: 16px;
   height: 640px;
+  margin-top: 30px;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 0;
+  }
 
   &_1 {
     position: relative;

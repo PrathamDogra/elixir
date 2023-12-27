@@ -4,7 +4,7 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 import DownloadIcon from "assets/icons/DownIcon.svg";
 import ESRImg from "assets/images/Elixir_7-5.png";
-import { clubhouseAmenities } from "../../constants";
+import { clubhouseAmenities, outdorrAmenities } from "../../constants";
 import Link from "next/link";
 
 const Amenities = () => {
@@ -70,6 +70,19 @@ const Amenities = () => {
         <div className={styles.bgImage2}></div>
         <div className={styles.bgImage3}></div>
         <div className={styles.bgImage4}></div>
+      </div>
+      <div className={styles.cardsSection}>
+        <div className={styles.heading}>OUTDOOR AMENITIES</div>
+        <div className={styles.cards}>
+          {outdorrAmenities?.map((item) => {
+            return (
+              <div className={styles.card}>
+                <Image src={item?.icon} alt="" />
+                <div className={styles.text}>{item?.text}</div>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <Footer />
     </div>

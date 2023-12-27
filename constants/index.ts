@@ -53,6 +53,17 @@ import YogaIcon from "assets/icons/clubhouse/yoga.svg";
 import LibraryIcon from "assets/icons/clubhouse/library.svg";
 import MultiIcon from "assets/icons/clubhouse/multi.svg";
 
+//icons Outdoor
+
+import BadmintonIcon from "assets/icons/outdoor/badminton.svg";
+import BasketballIcon from "assets/icons/outdoor/basketball.svg";
+import CricketIcon from "assets/icons/outdoor/cricket.svg";
+import CyclingIcon from "assets/icons/outdoor/cycling.svg";
+import JoggingIcon from "assets/icons/outdoor/jogging.svg";
+import PlayIcon from "assets/icons/outdoor/playarea.svg";
+import SkatingIcon from "assets/icons/outdoor/skating.svg";
+import SwimmingIcon from "assets/icons/outdoor/swimming.svg";
+
 // Icons HamburgerMenu
 
 import AmenitiesIcon from "assets/icons/amenitiesIcon.svg";
@@ -488,4 +499,27 @@ export const clubhouseAmenities = [
     text: "Banquet lawns",
     icon: BanquetIcon,
   },
+];
+
+export const outdorrAmenities = [
+  {
+    text: "Swimming pool",
+    icon: SwimmingIcon,
+  },
+  {
+    text: "Cycling track",
+    icon: CyclingIcon,
+  },
+  {
+    text: "Basketball court",
+    icon: BasketballIcon,
+  },
+  {
+    text: "Badminton court",
+    icon: BadmintonIcon,
+  },
+  { text: "Skating rink", icon: SkatingIcon },
+  { text: "Children’s play area", icon: PlayIcon },
+  { text: "Jogging track", icon: JoggingIcon },
+  { text: "Cricket practice nets", icon: CricketIcon },
 ];

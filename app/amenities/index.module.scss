@@ -7,6 +7,11 @@
   gap: 16px;
   margin-top: 40px;
 
+  @include mobile {
+    margin-top: 25px;
+    padding: 0 20px;
+  }
+
   .heading {
     color: #8c6542;
     font-size: 40px;
@@ -14,6 +19,10 @@
     font-weight: 400;
     line-height: normal;
     width: 90%;
+
+    @include mobile {
+      font-size: 36px;
+    }
   }
 
   .subHeading {
@@ -23,6 +32,10 @@
     font-style: normal;
     font-weight: 300;
     letter-spacing: -0.56px;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 }
 
@@ -45,6 +58,13 @@
       line-height: normal;
       letter-spacing: -0.4px;
     }
+
+    @include mobile {
+      padding: 0 20px;
+      .downloadBtn {
+        font-size: 16px;
+      }
+    }
   }
 
   .bgImage {
@@ -55,6 +75,12 @@
     height: 100vh;
     max-width: 1200px;
     max-height: 980px;
+
+    @include mobile {
+      width: 100vw;
+      max-width: 390px;
+      max-height: 800px;
+    }
   }
 }
 
@@ -65,6 +91,10 @@
   overflow-y: hidden;
   min-width: 1200px;
 
+  @include mobile {
+    min-width: 390px;
+  }
+
   .bgImage1 {
     background-image: url("../../assets/images/ElixirAmneties.png");
     background-repeat: no-repeat;
@@ -73,6 +103,11 @@
     height: 100vh;
     min-width: 1200px;
     max-height: 980px;
+
+    @include mobile {
+      min-width: 414px;
+      max-height: 359px;
+    }
   }
 
   .bgImage2 {
@@ -83,6 +118,10 @@
     height: 100vh;
     min-width: 1200px;
     max-height: 980px;
+    @include mobile {
+      min-width: 414px;
+      max-height: 359px;
+    }
   }
 
   .bgImage3 {
@@ -93,6 +132,10 @@
     height: 100vh;
     min-width: 1200px;
     max-height: 980px;
+    @include mobile {
+      min-width: 414px;
+      max-height: 359px;
+    }
   }
 
   .bgImage4 {
@@ -103,16 +146,21 @@
     height: 100vh;
     min-width: 1200px;
     max-height: 980px;
+    @include mobile {
+      min-width: 414px;
+      max-height: 359px;
+    }
   }
 }
 
 .cardsSection {
   display: flex;
   width: 90vw;
-  height: 80vh;
+  min-height: 80vh;
   background-color: #7a8c51;
   padding: 50px;
   margin-top: 50px;
+  gap: 40px;
 
   .heading {
     color: #fff;
@@ -122,6 +170,9 @@
     font-weight: 500;
     line-height: 60px;
     letter-spacing: -0.96px;
+    @include mobile {
+      display: none;
+    }
   }
 
   .cards {

@@ -65,6 +65,53 @@
   max-height: 550px;
   margin: 50px 0;
 
+  .leftImageContainer {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100vw;
+    .first {
+      background-image: url("../assets/images/home-image-1.jpeg");
+      background-position: center;
+      width: 414px;
+      min-width: 414px;
+      height: 359px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .second {
+      background-image: url("../assets/images/ELIXIR-RENDER-1.png");
+      background-position: center;
+      width: 414px;
+      min-width: 414px;
+      height: 359px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .third {
+      background-image: url("../assets/images/ELIXIR-RENDER-2.png");
+      background-position: center;
+      width: 414px;
+      min-width: 414px;
+      height: 359px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .fourth {
+      background-image: url("../assets/images/ELIXIR-RENDER-3.png");
+      background-position: center;
+      width: 414px;
+      min-width: 414px;
+      height: 359px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
   .leftImage {
     background-image: url("../assets/images/home-image-1.jpeg");
     background-position: center;
@@ -72,6 +119,56 @@
     height: 652px;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .rightImageContainer {
+    display: flex;
+    gap: 10px;
+    .rightImage {
+      background-image: url("../assets/images/elixir-home.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 399px;
+      height: 652px;
+
+      @include mobile {
+        width: 300px;
+        height: 233px;
+      }
+    }
+
+    &_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #8c6542;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 16px;
+      letter-spacing: -0.26px;
+
+      div {
+        position: relative;
+        top: 15px;
+        max-width: 104px;
+      }
+
+      .galaryBtn {
+        position: relative;
+        bottom: 15px;
+        @include btn-class;
+        color: #22401e;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        width: fit-content;
+        padding: 0;
+        letter-spacing: -0.4px;
+      }
+    }
   }
 
   .rightImage {
@@ -184,8 +281,10 @@
       flex: 1;
 
       @include mobile {
+        gap: 16px;
         align-items: center;
-        flex-direction: column;
+        overflow-x: auto;
+        // flex-direction: column;
       }
 
       .villas {
@@ -197,9 +296,22 @@
           height: 528px;
           // background-repeat: no-repeat;
 
+          .plusBtn {
+            @include btn-class;
+            @include display-row-center;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            background-color: #7a8c51;
+          }
+
           @include mobile {
             flex: none;
-            width: 355px;
+            width: 248px;
+            height: 328px;
           }
 
           .villas_text {
@@ -212,6 +324,9 @@
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0.4px;
+            @include mobile {
+              font-size: 14px;
+            }
           }
         }
 
@@ -223,9 +338,22 @@
           height: 528px;
           background-repeat: no-repeat;
 
+          .plusBtn {
+            @include btn-class;
+            @include display-row-center;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            background-color: #7a8c51;
+          }
+
           @include mobile {
             flex: none;
-            width: 355px;
+            width: 248px;
+            height: 328px;
           }
 
           .villas_text {
@@ -238,6 +366,9 @@
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0.4px;
+            @include mobile {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -361,14 +492,15 @@
   height: 640px;
 
   @include mobile {
-    height: 950px;
-    flex-direction: column;
+    height: 500px;
     &_1 {
+      width: 50%;
       flex: none !important;
       height: 500px;
     }
 
     &_2 {
+      width: 50%;
       flex: none !important;
       height: 500px;
     }
@@ -382,6 +514,9 @@
     flex: 1;
     gap: 20px;
     background-color: #7a8c51;
+    @include mobile {
+      gap: 20px;
+    }
   }
 
   &_2 {
@@ -392,6 +527,10 @@
     flex: 1;
     gap: 60px;
     background-color: #8c6542;
+
+    @include mobile {
+      gap: 20px;
+    }
   }
 
   .textSection {
@@ -406,6 +545,12 @@
     font-weight: 400;
     line-height: 40px;
     letter-spacing: -0.64px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 20px;
+      gap: 3px;
+    }
     &_1 {
     }
 

@@ -42,6 +42,8 @@ const Villas = () => {
     router.push(`/villas/${id}`);
   };
 
+  console.log(EastFacingVllas, "EastFacingVllas");
+
   return (
     <div className={cn("page-container")}>
       <Header />
@@ -50,9 +52,11 @@ const Villas = () => {
         <div className={styles.subHeading}>
           Immerse yourself in a world of innovation and style with our
           groundbreaking east and west villa plans, where thoughtful design
-          takes centre stage. Experience the beauty of larger balconies, open
-          sit-out spaces, and terraces, perfectly curated for elevating urban
-          living to new heights.
+          takes centre stage.
+        </div>
+        <div className={styles.subHeading}>
+          Experience the beauty of larger balconies, open sit-out spaces, and
+          terraces, perfectly curated for elevating urban living to new heights.
         </div>
       </div>
       <Link
@@ -70,7 +74,10 @@ const Villas = () => {
       <div className={styles.header}>EAST FACING VILLAS</div>
       <div className={styles.slidesContainer}>
         {EastFacingVllas?.map((villa) => (
-          <div className={styles.slide}>
+          <div
+            className={styles.slide}
+            style={{ backgroundImage: `url(${villa?.image?.src})` }}
+          >
             <div className={styles.text}>{villa.text}</div>
             <button
               type="button"
@@ -78,8 +85,16 @@ const Villas = () => {
               onClick={() => handleClickOnVillas(villa?.id)}
             >
               explore plans
-              <Image src={PlayIconWhite} width={6} height={11} alt="" />
-              <Image src={PlayIconWhite} width={6} height={11} alt="" />
+              {(screenWidth as number) < 767 ? (
+                <Image src={PlayIconWhite} alt="" width={9} height={4} />
+              ) : (
+                <Image src={PlayIconWhite} alt="" width={11} height={6} />
+              )}
+              {(screenWidth as number) < 767 ? (
+                <Image src={PlayIconWhite} alt="" width={9} height={4} />
+              ) : (
+                <Image src={PlayIconWhite} alt="" width={11} height={6} />
+              )}
             </button>
           </div>
         ))}
@@ -88,7 +103,10 @@ const Villas = () => {
         <div className={styles.headerWest}>WEST FACING VILLAS</div>
         <div className={styles.slidesContainer}>
           {WestFacingVillas?.map((villa) => (
-            <div className={cn(styles.slide, styles.westSide)}>
+            <div
+              className={styles.slide}
+              style={{ backgroundImage: `url(${villa?.image?.src})` }}
+            >
               <div className={styles.text}>{villa.text}</div>
               <button
                 type="button"
@@ -96,8 +114,16 @@ const Villas = () => {
                 onClick={() => handleClickOnVillas(villa?.id)}
               >
                 explore plans
-                <Image src={PlayIconWhite} width={6} height={11} alt="" />
-                <Image src={PlayIconWhite} width={6} height={11} alt="" />
+                {(screenWidth as number) < 767 ? (
+                  <Image src={PlayIconWhite} alt="" width={9} height={4} />
+                ) : (
+                  <Image src={PlayIconWhite} alt="" width={11} height={6} />
+                )}
+                {(screenWidth as number) < 767 ? (
+                  <Image src={PlayIconWhite} alt="" width={9} height={4} />
+                ) : (
+                  <Image src={PlayIconWhite} alt="" width={11} height={6} />
+                )}
               </button>
             </div>
           ))}
@@ -111,11 +137,7 @@ const Villas = () => {
           community hub.
         </div>
       </div>
-      {(screenWidth as number) < 767 ? (
-        <Image src={MasterPlan} width={360} height={207} alt="map" />
-      ) : (
-        <Image src={MasterPlan} width={1232} height={708} alt="map" />
-      )}
+      <div className={styles.map} />
 
       <Footer />
     </div>

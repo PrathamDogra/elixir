@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PlayIcon from "assets/icons/play.svg";
 import Footer from "components/Footer";
+import MobileNavigation from "components/MobileNavigation";
 import styles from "./index.module.scss";
 import Map from "assets/images/map.png";
 import WhatsApp from "assets/icons/WhatsAppIcon.svg";
@@ -91,14 +92,14 @@ const HomePage = () => {
           <Image src={TrainIcon} alt="" />
           <div className={styles.textSection}>
             <div className={styles["textSection_1"]}>10 MIN DRIVE FROM</div>
-            <div className={styles["textSection_2"]}>KADUGOI METRO STATION</div>
+            <div className={styles["textSection_2"]}>KADUGODI METRO STATION</div>
           </div>
         </div>
         <div className={styles["middleSection_2"]}>
           <Image src={HomeIcon} alt="" />
           <div className={styles.textSection}>
             <div className={styles["textSection_1"]}>10 MIN DRIVE FROM</div>
-            <div className={styles["textSection_2"]}>KADUGOI METRO STATION</div>
+            <div className={styles["textSection_2"]}>KADUGODI METRO STATION</div>
           </div>
         </div>
       </div>
@@ -145,6 +146,7 @@ const HomePage = () => {
         </Link>
       </div>
       <Footer />
+      <MobileNavigation/>
     </div>
   );
 };

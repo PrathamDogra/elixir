@@ -1,16 +1,16 @@
 @import "styles/mixins.scss";
 
 .header {
-  position: relative;
+  position: fixed;
   display: flex;
   align-items: center;
   border-radius: 5px;
   background: rgba(242, 239, 235, 0.8);
   max-width: 1200px;
+  width: 80%;
+  z-index: 100;
   height: 48px;
   padding: 12px 24px;
-  @include mobile {
-  }
 }
 
 .navbar {

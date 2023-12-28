@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 40px;
+  margin-top: 92px;
 
   @include mobile {
     margin-top: 25px;
@@ -60,9 +60,11 @@
     }
 
     @include mobile {
+      justify-content: flex-start;
       padding: 0 20px;
       .downloadBtn {
-        font-size: 16px;
+        font-size: 12px;
+        gap: 2px;
       }
     }
   }
@@ -78,8 +80,7 @@
 
     @include mobile {
       width: 100vw;
-      max-width: 390px;
-      max-height: 800px;
+      height: 359px;
     }
   }
 }
@@ -162,6 +163,10 @@
   margin-top: 50px;
   gap: 40px;
 
+  @include mobile {
+    padding: 20px;
+  }
+
   .heading {
     color: #fff;
     text-align: justify;
@@ -191,13 +196,23 @@
       width: 275px;
       height: 313px;
 
+      @include mobile {
+        width: 170px;
+        height: 190px;
+        gap: 10px;
+      }
+
       .text {
         color: #fcfbfa;
         text-align: center;
-        font-size: 25.6px;
+        font-size: 25px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+
+        @include mobile {
+          font-size: 14px;
+        }
       }
     }
   }

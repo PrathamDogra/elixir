@@ -1,13 +1,36 @@
+"use client";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import styles from "./index.module.scss";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import DownloadIcon from "assets/icons/DownIcon.svg";
-import ESRImg from "assets/images/Elixir_7-5.png";
 import { clubhouseAmenities, outdorrAmenities } from "../../constants";
 import Link from "next/link";
 
 const Amenities = () => {
+  const [screenWidth, setScreenWidth] = useState<Number>(0);
+  useEffect(() => {
+    const updateScreenWidth = () => {
+      if (typeof window !== "undefined") {
+        setScreenWidth(window.innerWidth);
+      }
+    };
+
+    // Initial screen width on mount
+    updateScreenWidth();
+
+    // Event listener for screen width changes
+    if (typeof window !== "undefined")
+      window.addEventListener("resize", updateScreenWidth);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      if (typeof window !== "undefined")
+        window.removeEventListener("resize", updateScreenWidth);
+    };
+  }, []);
+
   return (
     <div className={"page-container"}>
       <Header />
@@ -34,8 +57,16 @@ const Amenities = () => {
             <div
               style={{ display: "flex", flexDirection: "column", gap: "2px" }}
             >
-              <Image src={DownloadIcon} alt="" width={11} height={6} />
-              <Image src={DownloadIcon} alt="" width={11} height={6} />
+              {(screenWidth as number) < 767 ? (
+                <Image src={DownloadIcon} alt="" width={9} height={4} />
+              ) : (
+                <Image src={DownloadIcon} alt="" width={11} height={6} />
+              )}
+               {(screenWidth as number) < 767 ? (
+                <Image src={DownloadIcon} alt="" width={9} height={4} />
+              ) : (
+                <Image src={DownloadIcon} alt="" width={11} height={6} />
+              )}
             </div>
           </Link>
         </div>
@@ -77,7 +108,12 @@ const Amenities = () => {
           {outdorrAmenities?.map((item) => {
             return (
               <div className={styles.card}>
-                <Image src={item?.icon} alt="" />
+                {(screenWidth as number) < 767 ? (
+                  <Image src={item?.icon} alt="" height={68} />
+                ) : (
+                  <Image src={item?.icon} alt="" />
+                )}
+
                 <div className={styles.text}>{item?.text}</div>
               </div>
             );

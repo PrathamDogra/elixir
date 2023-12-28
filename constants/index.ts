@@ -71,6 +71,16 @@ import LocationIcon from "assets/icons/location.svg";
 import VillasIcon from "assets/icons/villasIcon.svg";
 import SpecsIcon from "assets/icons/specifications.svg";
 
+import EastFacing1200 from "../assets/images/villaImages/east-facing-1200.png";
+import EastFacing1500 from "../assets/images/villaImages/east-facing-1500.png";
+import EastFacing2105 from "../assets/images/villaImages/east-facing-2105.png";
+import EastFacing2400 from "../assets/images/villaImages/east-facing-2400.png";
+
+import WestFacing1200 from "../assets/images/villaImages/west-facing-1200.png";
+import WestFacing1500 from "../assets/images/villaImages/west-facing-1500.png";
+import WestFacing2105 from "../assets/images/villaImages/west-facing-2105.png";
+import WestFacing2400 from "../assets/images/villaImages/west-facing-2400.png";
+
 export const HeaderTabs = [
   { name: "Home", url: "/" },
   { name: "Villas", url: "/villas" },
@@ -436,18 +446,22 @@ export const EastFacingVllas = [
   {
     text: "1200 sqft",
     id: "E1200",
+    image: EastFacing1200,
   },
   {
     text: "1500 sqft",
     id: "E1500",
+    image: EastFacing1500,
   },
   {
     text: "2105 sqft",
     id: "E2105",
+    image: EastFacing2105,
   },
   {
     text: "2400 sqft",
     id: "E2400",
+    image: EastFacing2400,
   },
 ];
 
@@ -455,18 +469,22 @@ export const WestFacingVillas = [
   {
     text: "1200 sqft",
     id: "W1200",
+    image: WestFacing1200,
   },
   {
     text: "1500 sqft",
     id: "W1500",
+    image: WestFacing1500,
   },
   {
     text: "2105 sqft",
     id: "W2105",
+    image: WestFacing2105,
   },
   {
     text: "2400 sqft",
     id: "W2400",
+    image: WestFacing2400,
   },
 ];
 

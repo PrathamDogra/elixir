@@ -5,6 +5,7 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import DownloadIcon from "assets/icons/DownIcon.svg";
+import MobileNavigation from "components/MobileNavigation";
 import { clubhouseAmenities, outdorrAmenities } from "../../constants";
 import Link from "next/link";
 
@@ -62,7 +63,7 @@ const Amenities = () => {
               ) : (
                 <Image src={DownloadIcon} alt="" width={11} height={6} />
               )}
-               {(screenWidth as number) < 767 ? (
+              {(screenWidth as number) < 767 ? (
                 <Image src={DownloadIcon} alt="" width={9} height={4} />
               ) : (
                 <Image src={DownloadIcon} alt="" width={11} height={6} />
@@ -121,6 +122,7 @@ const Amenities = () => {
         </div>
       </div>
       <Footer />
+      {(screenWidth as number) < 767 && <MobileNavigation />}
     </div>
   );
 };

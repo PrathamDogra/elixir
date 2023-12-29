@@ -3,12 +3,11 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Header from "components/Header";
 import Footer from "components/Footer";
-import PlayIcon from "assets/icons/play.svg";
 import PlayIconWhite from "assets/icons/play-white.svg";
 import styles from "./index.module.scss";
 import { useRouter } from "next/navigation";
-import MasterPlan from "assets/images/masterplan.png";
 import DownloadIcon from "assets/icons/DownIcon.svg";
+import MobileNavigation from "components/MobileNavigation"
 import { EastFacingVllas, WestFacingVillas } from "../../constants";
 import Link from "next/link";
 import cn from "classnames";
@@ -140,6 +139,7 @@ const Villas = () => {
       <div className={styles.map} />
 
       <Footer />
+      {(screenWidth as number) < 767 && <MobileNavigation />}
     </div>
   );
 };

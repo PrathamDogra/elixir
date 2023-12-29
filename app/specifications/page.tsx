@@ -2,15 +2,38 @@
 import Header from "components/Header";
 import Footer from "components/Footer";
 import styles from "./index.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PlusIcon from "assets/icons/Plus-Icon.svg";
 import MinusIcon from "assets/icons/Minus-Icon.svg";
 import Image from "next/image";
+import MobileNavigation from "components/MobileNavigation";
 import { SpecificationsList } from "../../constants";
 import cn from "classnames";
 
 const Specification = () => {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+  const [screenWidth, setScreenWidth] = useState<Number>(0);
+
+  useEffect(() => {
+    const updateScreenWidth = () => {
+      if (typeof window !== "undefined") {
+        setScreenWidth(window.innerWidth);
+      }
+    };
+
+    // Initial screen width on mount
+    updateScreenWidth();
+
+    // Event listener for screen width changes
+    if (typeof window !== "undefined")
+      window.addEventListener("resize", updateScreenWidth);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      if (typeof window !== "undefined")
+        window.removeEventListener("resize", updateScreenWidth);
+    };
+  }, []);
 
   const handleTitleClick = (index: number) => {
     if (currentIndex === index) {
@@ -72,6 +95,7 @@ const Specification = () => {
         })}
       </div>
       <Footer />
+      {(screenWidth as number) < 767 && <MobileNavigation />}
     </div>
   );
 };

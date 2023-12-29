@@ -157,7 +157,7 @@
 
       .galaryBtn {
         position: relative;
-        bottom: 15px;
+        bottom: 20px;
         @include btn-class;
         color: #22401e;
         font-size: 12px;
@@ -493,6 +493,8 @@
 
   @include mobile {
     height: 500px;
+    position: relative;
+    top: -20px;
     &_1 {
       width: 50%;
       flex: none !important;

@@ -64,7 +64,7 @@ const Villas = () => {
         target="_blank"
         className={styles.download}
       >
-        <p>DOWNLOAD BROCHHURE</p>
+        <p>DOWNLOAD BROCHURE</p>
         <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
           <Image src={DownloadIcon} alt="" width={11} height={6} />
           <Image src={DownloadIcon} alt="" width={11} height={6} />

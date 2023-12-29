@@ -54,7 +54,7 @@ const Amenities = () => {
             target="_blank"
             className={styles.downloadBtn}
           >
-            <p>DOWNLOAD BROCHHURE</p>
+            <p>DOWNLOAD BROCHURE</p>
             <div
               style={{ display: "flex", flexDirection: "column", gap: "2px" }}
             >

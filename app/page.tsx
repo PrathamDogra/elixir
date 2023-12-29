@@ -10,11 +10,12 @@ import styles from "./index.module.scss";
 import Map from "assets/images/map.png";
 import WhatsApp from "assets/icons/WhatsAppIcon.svg";
 import RightIcon from "assets/icons/RightArrow.svg";
-import HomeIcon from "assets/icons/HomeIcon.svg";
+import HomeIcon from "assets/icons/house.svg";
 import TrainIcon from "assets/icons/TrainIcon.svg";
 import cn from "classnames";
 import { phoneNumber } from "../constants";
 import PlusIcon from "assets/icons/Plus-white.svg";
+import MinusIcon from "assets/icons/minus.svg";
 import { useRouter } from "next/navigation";
 
 const HomePage = () => {
@@ -140,24 +141,55 @@ const HomePage = () => {
             </button>
           </div>
           <div className={styles["explore_2"]}>
-            <div className={styles["villas_1"]}>
+            <div
+              className={cn(styles["villas_1"], {
+                [styles.showImage]: showEastFacing,
+              })}
+            >
               <button
                 type="button"
                 className={styles.plusBtn}
-                onClick={() => setShowEastFacing(true)}
+                onClick={() => setShowEastFacing((prev) => !prev)}
               >
-                <Image src={PlusIcon} alt="" />
+                {showEastFacing ? (
+                  <Image src={MinusIcon} alt="" width={10} height={10} />
+                ) : (
+                  <Image src={PlusIcon} alt="" width={16} height={16} />
+                )}
               </button>
+              {showEastFacing && (
+                <div className={styles["villas_1_para"]}>
+                  Indulge in the epitome of luxury with our 4-BHK villas,
+                  offering plot sizes from 1200 sqft to 2400 sqft and saleable
+                  spaces ranging from 2587 sqft to 5286 sqft.
+                </div>
+              )}
+
               <div className={styles["villas_text"]}>EAST FACING VILLAS</div>
             </div>
-            <div className={styles["villas_2"]}>
+            <div
+              className={cn(styles["villas_2"], {
+                [styles.showImage]: showWestFacing,
+              })}
+            >
               <button
                 type="button"
                 className={styles.plusBtn}
-                onClick={() => setShowWestFacing(true)}
+                onClick={() => setShowWestFacing((prev) => !prev)}
               >
-                <Image src={PlusIcon} alt="" />
+                {showWestFacing ? (
+                  <Image src={MinusIcon} alt="" width={10} height={10} />
+                ) : (
+                  <Image src={PlusIcon} alt="" width={16} height={16} />
+                )}
               </button>
+              {showWestFacing && (
+                <div className={styles["villas_2_para"]}>
+                  Uncover the essence of luxury in our 4-BHK villas, offering
+                  plot sizes from 1200 sqft to 2400 sqft, and expansive saleable
+                  spaces spanning 2588 sqft to 5285 sqft.
+                </div>
+              )}
               <div className={styles["villas_text"]}>WEST FACING VILLAS</div>
             </div>
           </div>
@@ -180,7 +212,7 @@ const HomePage = () => {
         </div>
         <div className={styles["middleSection_2"]}>
           {(screenWidth as number) > 767 ? (
-            <Image src={HomeIcon} alt="" />
+            <Image src={HomeIcon} alt="" width={279} height={275} />
           ) : (
             <Image src={HomeIcon} alt="" width={83} height={89} />
           )}

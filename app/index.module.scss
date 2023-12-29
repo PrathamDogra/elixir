@@ -143,7 +143,7 @@
       flex-direction: column;
       justify-content: space-between;
       color: #8c6542;
-      font-size: 13px;
+      font-size: 16px;
       font-style: normal;
       font-weight: 300;
       line-height: 16px;
@@ -151,7 +151,7 @@
 
       div {
         position: relative;
-        top: 15px;
+        top: 18px;
         max-width: 104px;
       }
 
@@ -212,7 +212,7 @@
     line-height: normal;
 
     @include mobile {
-      font-size: 36px;
+      font-size: 24px;
       padding: 0 20px;
     }
   }
@@ -221,7 +221,7 @@
     display: flex;
 
     @include mobile {
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 20px;
     }
     &_1 {
@@ -239,7 +239,7 @@
         letter-spacing: -0.56px;
 
         @include mobile {
-          font-size: 24px;
+          font-size: 22px;
           padding: 0 20px;
         }
       }
@@ -290,84 +290,147 @@
       .villas {
         &_1 {
           position: relative;
-          flex: 1;
           background-image: url("../assets/images/Elixir-east-villa.png");
           background-position: center;
-          height: 528px;
-          // background-repeat: no-repeat;
+          height: 436px;
+          width: 338px;
+          background-repeat: no-repeat;
+
+          &.showImage {
+            background-image: none;
+            background-color: #8c6542;
+          }
 
           .plusBtn {
             @include btn-class;
             @include display-row-center;
             position: absolute;
-            top: 8px;
-            right: 8px;
+            top: 7px;
+            right: 7px;
             border-radius: 50%;
-            width: 16px;
-            height: 16px;
+            width: 34px;
+            height: 34px;
             background-color: #7a8c51;
+            @include mobile {
+              width: 20px;
+              height: 20px;
+            }
           }
 
           @include mobile {
-            flex: none;
-            width: 248px;
-            height: 328px;
+            min-width: 100vw;
+            height: 436px;
           }
 
           .villas_text {
             position: absolute;
-            bottom: 5px;
-            left: 5px;
+            left: 0;
+            bottom: 0;
+            padding: 16px 10px;
             color: #fcfbfa;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0.4px;
+            width: 94%;
+            max-height: 48px;
+            background: linear-gradient(
+              182deg,
+              rgba(29, 29, 31, 0) -13.93%,
+              #1d1d1f 92.75%
+            );
             @include mobile {
               font-size: 14px;
+            }
+          }
+
+          .villas_1_para {
+            padding: 30px 16px;
+            color: #fff;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 36px;
+            letter-spacing: -0.7px;
+
+            @include mobile {
+              padding: 16px;
+              font-size: 20px;
             }
           }
         }
 
         &_2 {
           position: relative;
-          flex: 1;
           background-image: url("../assets/images/Elixir_west-side.png");
           background-position: center;
-          height: 528px;
+          background-size: cover;
+          height: 436px !important;
+          width: 338px !important;
           background-repeat: no-repeat;
+
+          &.showImage {
+            background-image: none;
+            background-color: #8c6542;
+          }
 
           .plusBtn {
             @include btn-class;
             @include display-row-center;
             position: absolute;
-            top: 8px;
-            right: 8px;
+            top: 7px;
+            right: 7px;
             border-radius: 50%;
-            width: 16px;
-            height: 16px;
+            width: 34px;
+            height: 34px;
             background-color: #7a8c51;
+            @include mobile {
+              width: 20px;
+              height: 20px;
+            }
           }
 
           @include mobile {
-            flex: none;
-            width: 248px;
+            min-width: 100vw;
             height: 328px;
           }
 
           .villas_text {
             position: absolute;
-            bottom: 5px;
-            left: 5px;
+            left: 0;
+            bottom: 0;
+            padding: 16px 10px;
             color: #fcfbfa;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0.4px;
+            width: 100%;
+            max-height: 48px;
+            background: linear-gradient(
+              182deg,
+              rgba(29, 29, 31, 0) -13.93%,
+              #1d1d1f 92.75%
+            );
             @include mobile {
               font-size: 14px;
+            }
+          }
+
+          .villas_2_para {
+            padding: 30px 16px;
+            color: #fff;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 36px;
+            letter-spacing: -0.7px;
+
+            @include mobile {
+              padding: 16px;
+              font-size: 20px;
             }
           }
         }
@@ -451,7 +514,7 @@
       line-height: normal;
 
       @include mobile {
-        font-size: 36px;
+        font-size: 28px;
       }
     }
 
@@ -493,8 +556,6 @@
 
   @include mobile {
     height: 500px;
-    position: relative;
-    top: -20px;
     &_1 {
       width: 50%;
       flex: none !important;
@@ -527,7 +588,7 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-    gap: 60px;
+    gap: 20px;
     background-color: #8c6542;
 
     @include mobile {
@@ -569,8 +630,11 @@
   margin-top: 30px;
 
   @include mobile {
+    position: relative;
+    top: -20px;
     overflow-x: auto;
     gap: 5px;
+    margin-top: 0;
   }
 
   &_1 {
@@ -593,7 +657,7 @@
       );
     }
     @include mobile {
-      min-width: 250px;
+      min-width: 100vw;
     }
   }
 
@@ -617,7 +681,7 @@
       );
     }
     @include mobile {
-      min-width: 250px;
+      min-width: 100vw;
     }
   }
 
@@ -642,7 +706,7 @@
     }
 
     @include mobile {
-      min-width: 250px;
+      min-width: 100vw;
     }
   }
 

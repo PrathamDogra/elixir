@@ -173,7 +173,7 @@
   background-position: center;
 
   @include mobile {
-    width: 360px;
-    height: 254px;
+    width: 100vw;
+    height: 50vh;
   }
 }

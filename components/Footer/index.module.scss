@@ -11,6 +11,16 @@
   @include mobile {
     padding: 32px 20px;
   }
+
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @include mobile {
+      justify-content: flex-start;
+    }
+  }
   .infoContainer {
     display: flex;
     flex-direction: column;

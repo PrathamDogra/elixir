@@ -162,7 +162,7 @@ const HomePage = () => {
               </button>
               {showEastFacing && (
                 <div className={styles["villas_1_para"]}>
-                  Indulge in the epitome of luxury with our 4-BHK villas,
+                  Indulge in the epitome of luxury with our 3+BHK villas,
                   offering plot sizes from 1200 sqft to 2400 sqft and saleable
                   spaces ranging from 2587 sqft to 5286 sqft.
                 </div>
@@ -188,7 +188,7 @@ const HomePage = () => {
               </button>
               {showWestFacing && (
                 <div className={styles["villas_2_para"]}>
-                  Uncover the essence of luxury in our 4-BHK villas, offering
+                  Uncover the essence of luxury in our 4+BHK villas, offering
                   plot sizes from 1200 sqft to 2400 sqft, and expansive saleable
                   spaces spanning 2588 sqft to 5285 sqft.
                 </div>
@@ -221,10 +221,8 @@ const HomePage = () => {
           )}
 
           <div className={styles.textSection}>
-            <div className={styles["textSection_1"]}>10 MIN DRIVE FROM</div>
-            <div className={styles["textSection_2"]}>
-              KADUGODI METRO STATION
-            </div>
+            <div className={styles["textSection_1"]}>WORLD CLASS</div>
+            <div className={styles["textSection_2"]}>AMENITIES</div>
           </div>
         </div>
       </div>

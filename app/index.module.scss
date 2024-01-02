@@ -486,6 +486,10 @@
     letter-spacing: -0.4px;
     display: flex;
     align-items: center;
+
+    @include mobile {
+      left: 20px;
+    }
   }
 }
 

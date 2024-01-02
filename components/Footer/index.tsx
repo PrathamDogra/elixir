@@ -1,12 +1,42 @@
 import FooterLogo from "assets/images/footer-logo.png";
+import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 import { FooterInfo } from "../../constants";
 import Image from "next/image";
 
 const Footer = () => {
+  const [screenWidth, setScreenWidth] = useState<Number>(0);
+
+  useEffect(() => {
+    const updateScreenWidth = () => {
+      if (typeof window !== "undefined") {
+        setScreenWidth(window.innerWidth);
+      }
+    };
+
+    // Initial screen width on mount
+    updateScreenWidth();
+
+    // Event listener for screen width changes
+    if (typeof window !== "undefined")
+      window.addEventListener("resize", updateScreenWidth);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      if (typeof window !== "undefined")
+        window.removeEventListener("resize", updateScreenWidth);
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
-      <Image src={FooterLogo} alt="Logo" width={227} height={108} />
+      <div className={styles.logoContainer}>
+      {(screenWidth as number) < 767 ? (
+        <Image src={FooterLogo} alt="Logo" width={91} height={64} />
+      ) : (
+        <Image src={FooterLogo} alt="Logo" width={227} height={108} />
+      )}
+      </div>
       <div className={styles.infoContainer}>
         {FooterInfo.map((info, index) => {
           return (

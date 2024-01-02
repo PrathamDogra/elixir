@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MailIcon from "assets/icons/mail-icon.svg";
 import classNames from "classnames";
-import { email, phoneNumber } from "../../constants";
+import { email, MOBILE_NUMBER, MESSAGE } from "../../constants";
 import WhatsAppIcon from "assets/icons/whatsapp-icon.svg";
 import ExploreIcon from "assets/icons/explore-icon.svg";
 // Icons for Explore;
@@ -26,7 +26,6 @@ const MobileNavigation = () => {
         <Link href={`mailto:${email}`}>
           <Image src={MailIcon} alt="" />
         </Link>
-
         <div>Enquire now</div>
       </div>
       <div
@@ -37,7 +36,9 @@ const MobileNavigation = () => {
       </div>
       <div className={styles.exploreText}>Explore</div>
       <div className={styles.whatsAppContainer}>
-        <Link href={`tel:${phoneNumber}`}>
+        <Link
+          href={`//api.whatsapp.com/send?phone=${MOBILE_NUMBER}&text=${MESSAGE}`}
+        >
           <Image src={WhatsAppIcon} alt="" />
         </Link>
         <div>Whatsapp</div>

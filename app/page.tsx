@@ -13,10 +13,10 @@ import RightIcon from "assets/icons/RightArrow.svg";
 import HomeIcon from "assets/icons/house.svg";
 import TrainIcon from "assets/icons/TrainIcon.svg";
 import cn from "classnames";
-import { phoneNumber } from "../constants";
 import PlusIcon from "assets/icons/Plus-white.svg";
 import MinusIcon from "assets/icons/minus.svg";
 import { useRouter } from "next/navigation";
+import { MOBILE_NUMBER, MESSAGE } from "../constants";
 
 const HomePage = () => {
   const router = useRouter();
@@ -112,7 +112,10 @@ const HomePage = () => {
       </div>
       {(screenWidth as number) > 767 && (
         <div className={styles.whatsAppContainer}>
-          <Link href={`tel:${phoneNumber}`} className={styles.whatsAppBtn}>
+          <Link
+            href={`//api.whatsapp.com/send?phone=${MOBILE_NUMBER}&text=${MESSAGE}`}
+            className={styles.whatsAppBtn}
+          >
             <Image src={WhatsApp} width={36} height={36} alt="" />
           </Link>
         </div>

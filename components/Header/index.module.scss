@@ -158,6 +158,10 @@
       border-bottom: 1px solid #7a8c51;
       padding: 10px 0;
 
+      &:last-child {
+        border-bottom: none;
+      }
+
       .circularIcon {
         @include display-row-center;
         border-radius: 50%;

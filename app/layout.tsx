@@ -15,7 +15,10 @@ export default function RootLayout({
         <link rel="icon" href="/images/DSR-logo.svg" />
       </head>
       <body>
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+        <Suspense fallback={<Loading />}>
+          {children}
+          <div id="modal-root"></div>
+        </Suspense>
       </body>
     </html>
   );

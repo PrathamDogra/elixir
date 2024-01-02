@@ -65,11 +65,12 @@ import SkatingIcon from "assets/icons/outdoor/skating.svg";
 import SwimmingIcon from "assets/icons/outdoor/swimming.svg";
 
 // Icons HamburgerMenu
-
 import AmenitiesIcon from "assets/icons/amenitiesIcon.svg";
 import LocationIcon from "assets/icons/location.svg";
 import VillasIcon from "assets/icons/villasIcon.svg";
 import SpecsIcon from "assets/icons/specifications.svg";
+import EnquireNowIcon from "assets/icons/enquire-now.svg";
+import WhatsappIcon from "assets/icons/whatsapp.svg";
 
 import EastFacing1200 from "../assets/images/villaImages/east-facing-1200.png";
 import EastFacing1500 from "../assets/images/villaImages/east-facing-1500.png";
@@ -80,6 +81,9 @@ import WestFacing1200 from "../assets/images/villaImages/west-facing-1200.png";
 import WestFacing1500 from "../assets/images/villaImages/west-facing-1500.png";
 import WestFacing2105 from "../assets/images/villaImages/west-facing-2105.png";
 import WestFacing2400 from "../assets/images/villaImages/west-facing-2400.png";
+
+export const MOBILE_NUMBER = "+91 99455 36006";
+export const MESSAGE = "Hey";
 
 export const HeaderTabs = [
   { name: "Home", url: "/" },
@@ -94,6 +98,16 @@ export const mobileHeaderTabs = [
   { name: "Amenities", url: "/amenities", icon: AmenitiesIcon },
   { name: "Specifications", url: "/specifications", icon: SpecsIcon },
   { name: "Location", url: "/#location", icon: LocationIcon },
+  {
+    name: "Enquire now",
+    url: "mailto:sales.elixir@dsrinfra.com",
+    icon: EnquireNowIcon,
+  },
+  {
+    name: "WhatsApp",
+    url: `//api.whatsapp.com/send?phone=${MOBILE_NUMBER}&text=${MESSAGE}`,
+    icon: WhatsappIcon,
+  },
 ];
 
 export const FooterInfo = [

@@ -198,7 +198,12 @@
       @include mobile {
         width: 170px;
         height: 190px;
-        gap: 10px;
+        gap: 20px;
+
+        img {
+          max-width: 110px;
+          max-height: 80px;
+        }
       }
 
       .text {

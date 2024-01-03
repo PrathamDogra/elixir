@@ -637,8 +637,9 @@
     position: relative;
     top: -20px;
     overflow-x: auto;
-    gap: 5px;
+    gap: 2px;
     margin-top: 0;
+    height: 400px;
   }
 
   &_1 {
@@ -661,7 +662,7 @@
       );
     }
     @include mobile {
-      min-width: 100vw;
+      min-width: 33vw;
     }
   }
 
@@ -685,7 +686,7 @@
       );
     }
     @include mobile {
-      min-width: 100vw;
+      min-width: 33vw;
     }
   }
 
@@ -710,7 +711,7 @@
     }
 
     @include mobile {
-      min-width: 100vw;
+      min-width: 33vw;
     }
   }
 
@@ -725,7 +726,9 @@
     line-height: 20px;
     letter-spacing: 0.96px;
     @include mobile {
-      font-size: 14px;
+      font-size: 12px;
+      left: 5px;
+      bottom: 5px;
     }
   }
 }

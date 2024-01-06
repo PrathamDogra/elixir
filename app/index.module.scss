@@ -213,19 +213,6 @@
   }
 }
 
-.whatsAppContainer {
-  display: flex;
-  justify-content: flex-end;
-
-  .whatsAppBtn {
-    @include btn-class;
-  }
-
-  @include mobile {
-    padding: 0 20px;
-  }
-}
-
 .exploreSection {
   display: flex;
   flex-direction: column;

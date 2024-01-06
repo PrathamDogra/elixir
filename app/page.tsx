@@ -7,8 +7,6 @@ import PlayIcon from "assets/icons/play.svg";
 import Footer from "components/Footer";
 import MobileNavigation from "components/MobileNavigation";
 import styles from "./index.module.scss";
-import Map from "assets/images/map.png";
-import WhatsApp from "assets/icons/WhatsAppIcon.svg";
 import RightIcon from "assets/icons/RightArrow.svg";
 import HomeIcon from "assets/icons/house.svg";
 import TrainIcon from "assets/icons/TrainIcon.svg";
@@ -16,7 +14,7 @@ import cn from "classnames";
 import PlusIcon from "assets/icons/Plus-white.svg";
 import MinusIcon from "assets/icons/minus.svg";
 import { useRouter } from "next/navigation";
-import { MOBILE_NUMBER, MESSAGE } from "../constants";
+import WhatsApp from "../components/WhatsApp";
 
 const HomePage = () => {
   const router = useRouter();
@@ -105,16 +103,6 @@ const HomePage = () => {
         </div>
       ) : (
         <div className={styles.rightImage}></div>
-      )}
-      {(screenWidth as number) > 767 && (
-        <div className={styles.whatsAppContainer}>
-          <Link
-            href={`//api.whatsapp.com/send?phone=${MOBILE_NUMBER}&text=${MESSAGE}`}
-            className={styles.whatsAppBtn}
-          >
-            <Image src={WhatsApp} width={36} height={36} alt="" />
-          </Link>
-        </div>
       )}
       <div className={styles.exploreSection}>
         <div className={styles.heading}>
@@ -266,6 +254,7 @@ const HomePage = () => {
       </div>
       <Footer />
       {(screenWidth as number) < 767 && <MobileNavigation />}
+      {(screenWidth as number) > 767 && <WhatsApp />}
     </div>
   );
 };

@@ -593,7 +593,11 @@
 .middleSection {
   display: flex;
   height: 640px;
-  margin-top: 20px;
+  margin-top: 50px;
+
+  @include mobile {
+    margin-top: 20px;
+  }
 
   @include mobile {
     height: 500px;

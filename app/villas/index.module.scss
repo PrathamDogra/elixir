@@ -87,6 +87,7 @@
 .slide {
   position: relative;
   background-size: cover;
+  min-width: 436px;
   width: 436px;
   height: 436px;
   background-repeat: no-repeat;
@@ -178,11 +179,14 @@
   height: 708px;
   background-image: url("../../assets/images/masterplan.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 150%;
   background-position: center;
+  margin-top: 50px;
 
   @include mobile {
     width: 100vw;
     height: 50vh;
+    background-size: 120%;
+    margin-top: 30px;
   }
 }

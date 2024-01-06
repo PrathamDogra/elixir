@@ -88,12 +88,12 @@ const Villas = () => {
                 {(screenWidth as number) < 767 ? (
                   <Image src={PlayIconWhite} alt="" width={5} height={4} />
                 ) : (
-                  <Image src={PlayIconWhite} alt="" width={8} height={6} />
+                  <Image src={PlayIconWhite} alt="" width={7} height={11} />
                 )}
                 {(screenWidth as number) < 767 ? (
                   <Image src={PlayIconWhite} alt="" width={5} height={4} />
                 ) : (
-                  <Image src={PlayIconWhite} alt="" width={8} height={6} />
+                  <Image src={PlayIconWhite} alt="" width={7} height={11} />
                 )}
               </button>
             </div>
@@ -119,12 +119,12 @@ const Villas = () => {
                   {(screenWidth as number) < 767 ? (
                     <Image src={PlayIconWhite} alt="" width={5} height={4} />
                   ) : (
-                    <Image src={PlayIconWhite} alt="" width={8} height={6} />
+                    <Image src={PlayIconWhite} alt="" width={7} height={11} />
                   )}
                   {(screenWidth as number) < 767 ? (
                     <Image src={PlayIconWhite} alt="" width={5} height={4} />
                   ) : (
-                    <Image src={PlayIconWhite} alt="" width={8} height={6} />
+                    <Image src={PlayIconWhite} alt="" width={7} height={11} />
                   )}
                 </button>
               </div>

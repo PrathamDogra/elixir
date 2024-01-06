@@ -55,7 +55,7 @@ const MobileNavigation = () => {
         onClick={() => router.push("/specifications")}
       >
         <Image src={SpecsIcon} width={16} height={16} alt="" />
-        <div className={styles.text}>Specification</div>
+        <div className={styles.text}>Specs</div>
       </div>
       <div
         className={classNames(styles["circle_3"], { [styles.close]: !openNav })}

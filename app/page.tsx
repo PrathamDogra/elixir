@@ -76,40 +76,36 @@ const HomePage = () => {
       )}
 
       <div className={styles.imagesSection}>
-        {(screenWidth as number) < 767 ? (
-          <div className={styles.leftImageContainer}>
-            <div className={styles.first} />
-            <div className={styles.second} />
-            <div className={styles.third} />
-            <div className={styles.fourth} />
-          </div>
-        ) : (
-          <div className={styles.leftImage} />
-        )}
-
-        {(screenWidth as number) < 767 ? (
-          <div className={styles.rightImageContainer}>
-            <div className={styles.rightImage}></div>
-            <div className={styles["rightImageContainer_text"]}>
-              <div>
-                Discover the perfect blend of modern living and serene nature in
-                Whitefield.
-              </div>
-              <button
-                type="button"
-                className={styles.galaryBtn}
-                onClick={handleGallaryClick}
-              >
-                GALLERY
-                <Image src={PlayIcon} width={6} height={10} alt="" />
-                <Image src={PlayIcon} width={6} height={10} alt="" />
-              </button>
-            </div>
-          </div>
-        ) : (
-          <div className={styles.rightImage}></div>
-        )}
+        <div className={styles.leftImageContainer}>
+          <div className={styles.first} />
+          <div className={styles.second} />
+          <div className={styles.third} />
+          <div className={styles.fourth} />
+        </div>
       </div>
+
+      {(screenWidth as number) < 767 ? (
+        <div className={styles.rightImageContainer}>
+          <div className={styles.rightImage}></div>
+          <div className={styles["rightImageContainer_text"]}>
+            <div>
+              Discover the perfect blend of modern living and serene nature in
+              Whitefield.
+            </div>
+            <button
+              type="button"
+              className={styles.galaryBtn}
+              onClick={handleGallaryClick}
+            >
+              GALLERY
+              <Image src={PlayIcon} width={6} height={10} alt="" />
+              <Image src={PlayIcon} width={6} height={10} alt="" />
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className={styles.rightImage}></div>
+      )}
       {(screenWidth as number) > 767 && (
         <div className={styles.whatsAppContainer}>
           <Link

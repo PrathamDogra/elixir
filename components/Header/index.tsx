@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import cn from "classnames";
 import styles from "./index.module.scss";
-import DSRLogo from "public/images/DSR-Group-Logo-red.svg";
+import DSRLogo from "public/images/dsr-logo.png";
 import ElixirLogo from "public/images/ELIXIR.svg";
 import Link from "next/link";
 import { HeaderTabs, email, mobileHeaderTabs } from "../../constants";

@@ -7,6 +7,7 @@ import PlusIcon from "assets/icons/Plus-Icon.svg";
 import MinusIcon from "assets/icons/Minus-Icon.svg";
 import Image from "next/image";
 import MobileNavigation from "components/MobileNavigation";
+import WhatsApp from "components/WhatsApp";
 import { SpecificationsList } from "../../constants";
 import cn from "classnames";
 
@@ -96,6 +97,7 @@ const Specification = () => {
       </div>
       <Footer />
       {(screenWidth as number) < 767 && <MobileNavigation />}
+      {(screenWidth as number) > 767 && <WhatsApp />}
     </div>
   );
 };

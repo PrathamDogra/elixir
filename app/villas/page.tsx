@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import WhatsApp from "components/WhatsApp";
 import PlayIconWhite from "assets/icons/play-white.svg";
 import styles from "./index.module.scss";
 import { useRouter } from "next/navigation";
@@ -144,6 +145,7 @@ const Villas = () => {
 
       <Footer />
       {(screenWidth as number) < 767 && <MobileNavigation />}
+      {(screenWidth as number) > 767 && <WhatsApp />}
     </div>
   );
 };

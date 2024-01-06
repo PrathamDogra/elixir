@@ -2,6 +2,7 @@
 import Header from "components/Header";
 import Footer from "components/Footer";
 import styles from "./index.module.scss";
+import WhatsApp from "components/WhatsApp";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import DownloadIcon from "assets/icons/DownIcon.svg";
@@ -123,6 +124,7 @@ const Amenities = () => {
       </div>
       <Footer />
       {(screenWidth as number) < 767 && <MobileNavigation />}
+      {(screenWidth as number) > 767 && <WhatsApp />}
     </div>
   );
 };

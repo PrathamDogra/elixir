@@ -91,9 +91,11 @@
   overflow-x: scroll;
   overflow-y: hidden;
   min-width: 1200px;
+  margin-top: 56px;
 
   @include mobile {
     min-width: 390px;
+    margin-top: 30px;
   }
 
   .bgImage1 {
@@ -175,6 +177,7 @@
     font-weight: 500;
     line-height: 60px;
     letter-spacing: -0.96px;
+    width: 200px;
     @include mobile {
       display: none;
     }
@@ -195,6 +198,11 @@
       background: rgba(34, 64, 30, 0.5);
       width: 275px;
       height: 313px;
+
+      img {
+        max-width: 110px;
+        max-height: 80px;
+      }
 
       @include mobile {
         width: 170px;

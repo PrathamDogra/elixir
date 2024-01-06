@@ -12,9 +12,9 @@
   height: 48px;
   padding: 12px 24px;
 
-  // @include mobile {
-  //   width: 90%;
-  // }
+  @include mobile {
+    width: 90%;
+  }
 }
 
 .navbar {

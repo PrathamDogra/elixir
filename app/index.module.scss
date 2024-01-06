@@ -4,14 +4,14 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .headingSection {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 92px;
+  margin-top: 125px;
 
   .heading {
     color: #8c6542;
@@ -40,13 +40,13 @@
 
   @include mobile {
     padding: 0 20px;
+    margin-top: 95px;
   }
 }
 
 .gallaryCTA {
   display: flex;
   justify-content: flex-end;
-  margin-top: 20px;
   .galaryBtn {
     @include btn-class;
     color: #22401e;
@@ -63,7 +63,7 @@
   align-items: center;
   gap: 18px;
   max-height: 550px;
-  margin: 50px 0;
+  margin: 30px 0;
 
   .leftImageContainer {
     display: flex;
@@ -593,6 +593,7 @@
 .middleSection {
   display: flex;
   height: 640px;
+  margin-top: 20px;
 
   @include mobile {
     height: 500px;
@@ -667,11 +668,10 @@
   width: 100%;
   gap: 16px;
   height: 640px;
-  margin-top: 30px;
+  position: relative;
+  top: -15px;
 
   @include mobile {
-    position: relative;
-    top: -20px;
     overflow-x: auto;
     gap: 2px;
     margin-top: 0;

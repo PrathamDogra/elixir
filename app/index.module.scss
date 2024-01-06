@@ -667,7 +667,7 @@
 
   &_2 {
     position: relative;
-    background-image: url("../public/images/Elixir_2.png");
+    background-image: url("../public/images/Elixir_3.png");
     // background-position: center;
     // background-size: cover;
     background-repeat: no-repeat;
@@ -687,13 +687,13 @@
     }
     @include mobile {
       min-width: 33vw;
-      background-image: url("../public/images/Elixir_2_mobile.png");
+      background-image: url("../public/images/Elixir_3_mobile.png");
     }
   }
 
   &_3 {
     position: relative;
-    background-image: url("../public/images/Elixir_3.png");
+    background-image: url("../public/images/Elixir_2.png");
     background-position: center;
     background-repeat: no-repeat;
     flex: 1;
@@ -713,7 +713,7 @@
 
     @include mobile {
       min-width: 33vw;
-      background-image: url("../public/images/Elixir_3_mobile.png");
+      background-image: url("../public/images/Elixir_2_mobile.png");
     }
   }
 

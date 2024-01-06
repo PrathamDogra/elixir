@@ -7,7 +7,7 @@ import PlayIconWhite from "assets/icons/play-white.svg";
 import styles from "./index.module.scss";
 import { useRouter } from "next/navigation";
 import DownloadIcon from "assets/icons/DownIcon.svg";
-import MobileNavigation from "components/MobileNavigation"
+import MobileNavigation from "components/MobileNavigation";
 import { EastFacingVllas, WestFacingVillas } from "../../constants";
 import Link from "next/link";
 import cn from "classnames";
@@ -78,23 +78,25 @@ const Villas = () => {
             style={{ backgroundImage: `url(${villa?.image?.src})` }}
           >
             <div className={styles.text}>{villa.text}</div>
-            <button
-              type="button"
-              className={styles.exploreBtn}
-              onClick={() => handleClickOnVillas(villa?.id)}
-            >
-              explore plans
-              {(screenWidth as number) < 767 ? (
-                <Image src={PlayIconWhite} alt="" width={9} height={4} />
-              ) : (
-                <Image src={PlayIconWhite} alt="" width={11} height={6} />
-              )}
-              {(screenWidth as number) < 767 ? (
-                <Image src={PlayIconWhite} alt="" width={9} height={4} />
-              ) : (
-                <Image src={PlayIconWhite} alt="" width={11} height={6} />
-              )}
-            </button>
+            <div className={styles["exploreBtn_container"]}>
+              <button
+                type="button"
+                className={styles.exploreBtn}
+                onClick={() => handleClickOnVillas(villa?.id)}
+              >
+                explore plans
+                {(screenWidth as number) < 767 ? (
+                  <Image src={PlayIconWhite} alt="" width={5} height={4} />
+                ) : (
+                  <Image src={PlayIconWhite} alt="" width={8} height={6} />
+                )}
+                {(screenWidth as number) < 767 ? (
+                  <Image src={PlayIconWhite} alt="" width={5} height={4} />
+                ) : (
+                  <Image src={PlayIconWhite} alt="" width={8} height={6} />
+                )}
+              </button>
+            </div>
           </div>
         ))}
       </div>
@@ -107,23 +109,25 @@ const Villas = () => {
               style={{ backgroundImage: `url(${villa?.image?.src})` }}
             >
               <div className={styles.text}>{villa.text}</div>
-              <button
-                type="button"
-                className={styles.exploreBtn}
-                onClick={() => handleClickOnVillas(villa?.id)}
-              >
-                explore plans
-                {(screenWidth as number) < 767 ? (
-                  <Image src={PlayIconWhite} alt="" width={9} height={4} />
-                ) : (
-                  <Image src={PlayIconWhite} alt="" width={11} height={6} />
-                )}
-                {(screenWidth as number) < 767 ? (
-                  <Image src={PlayIconWhite} alt="" width={9} height={4} />
-                ) : (
-                  <Image src={PlayIconWhite} alt="" width={11} height={6} />
-                )}
-              </button>
+              <div className={styles["exploreBtn_container"]}>
+                <button
+                  type="button"
+                  className={styles.exploreBtn}
+                  onClick={() => handleClickOnVillas(villa?.id)}
+                >
+                  explore plans
+                  {(screenWidth as number) < 767 ? (
+                    <Image src={PlayIconWhite} alt="" width={5} height={4} />
+                  ) : (
+                    <Image src={PlayIconWhite} alt="" width={8} height={6} />
+                  )}
+                  {(screenWidth as number) < 767 ? (
+                    <Image src={PlayIconWhite} alt="" width={5} height={4} />
+                  ) : (
+                    <Image src={PlayIconWhite} alt="" width={8} height={6} />
+                  )}
+                </button>
+              </div>
             </div>
           ))}
         </div>

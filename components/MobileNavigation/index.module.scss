@@ -3,8 +3,10 @@
 
 .container {
   position: fixed;
-  bottom: 50px;
-  width: 100vw;
+  bottom: 0;
+  width: 360px;
+  left: 50%;
+  margin-left: -180px;
   height: 40px;
   z-index: 100;
   background: linear-gradient(
@@ -72,8 +74,8 @@
       @include display-row-center;
       background-color: #22401e;
       box-shadow: 0px 4px 4px rgba(34, 64, 30, 0.2);
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       display: flex;
       flex-direction: column;
@@ -89,15 +91,14 @@
 
     &_2 {
       position: absolute;
-      left: 140px;
+      left: 122px;
       bottom: 100px;
       @include display-row-center;
       background-color: #22401e;
       box-shadow: 0px 4px 4px rgba(34, 64, 30, 0.2);
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
-
       display: flex;
       flex-direction: column;
       gap: 3px;
@@ -112,13 +113,13 @@
 
     &_3 {
       position: absolute;
-      right: 140px;
+      right: 122px;
       bottom: 100px;
       @include display-row-center;
       background-color: #22401e;
       box-shadow: 0px 4px 4px rgba(34, 64, 30, 0.2);
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
 
       display: flex;
@@ -140,8 +141,8 @@
       @include display-row-center;
       background-color: #22401e;
       box-shadow: 0px 4px 4px rgba(34, 64, 30, 0.2);
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
 
       display: flex;
@@ -160,7 +161,7 @@
 
 .text {
   color: #f2efeb;
-  font-size: 6px;
+  font-size: 8px;
   font-style: normal;
   font-weight: 200;
   line-height: normal;

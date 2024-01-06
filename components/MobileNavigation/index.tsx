@@ -9,10 +9,10 @@ import { email, MOBILE_NUMBER, MESSAGE } from "../../constants";
 import WhatsAppIcon from "assets/icons/whatsapp-icon.svg";
 import ExploreIcon from "assets/icons/explore-icon.svg";
 // Icons for Explore;
-import AmenitiesIcon from "assets/icons/amenitiesIcon.svg";
-import LocationIcon from "assets/icons/location.svg";
-import VillasIcon from "assets/icons/villasIcon.svg";
-import SpecsIcon from "assets/icons/specifications.svg";
+import AmenitiesIcon from "../../public/assets/icons/amenitiesIcon.svg";
+import LocationIcon from "../../public/assets/icons/location.svg";
+import VillasIcon from "../../public/assets/icons/villasIcon.svg";
+import SpecsIcon from "../../public/assets/icons/specifications.svg";
 import { useRouter } from "next/navigation";
 
 const MobileNavigation = () => {

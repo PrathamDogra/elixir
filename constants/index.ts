@@ -65,12 +65,12 @@ import SkatingIcon from "assets/icons/outdoor/skating.svg";
 import SwimmingIcon from "assets/icons/outdoor/swimming.svg";
 
 // Icons HamburgerMenu
-import AmenitiesIcon from "assets/icons/amenitiesIcon.svg";
-import LocationIcon from "assets/icons/location.svg";
-import VillasIcon from "assets/icons/villasIcon.svg";
-import SpecsIcon from "assets/icons/specifications.svg";
-import EnquireNowIcon from "assets/icons/enquire-now.svg";
-import WhatsappIcon from "assets/icons/whatsapp.svg";
+import AmenitiesIcon from "../public/assets/icons/amenitiesIcon.svg";
+import LocationIcon from "../public/assets/icons/location.svg";
+import VillasIcon from "../public/assets/icons/villasIcon.svg";
+import SpecsIcon from "../public/assets/icons/specifications.svg";
+import EnquireNowIcon from "../public/assets/icons/enquire-now.svg";
+import WhatsappIcon from "../public/assets/icons/whatsapp.svg";
 
 import EastFacing1200 from "../assets/images/villaImages/east-facing-1200.png";
 import EastFacing1500 from "../assets/images/villaImages/east-facing-1500.png";

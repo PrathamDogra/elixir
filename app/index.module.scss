@@ -318,8 +318,10 @@
           }
 
           @include mobile {
-            min-width: 95vw;
-            height: 436px;
+            width: 248px;
+            height: 328px;
+            min-width: 63vw;
+            background-image: url("../public/images/Elixir_east.png");
           }
 
           .villas_text {
@@ -333,7 +335,7 @@
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0.4px;
-            width: 94%;
+            width: 92%;
             max-height: 48px;
             background: linear-gradient(
               182deg,
@@ -364,8 +366,8 @@
         &_2 {
           position: relative;
           background-image: url("../assets/images/Elixir_west-side.png");
-          height: 436px !important;
-          width: 338px !important;
+          height: 436px;
+          width: 338px;
           background-repeat: no-repeat;
 
           &.showImage {
@@ -390,7 +392,9 @@
           }
 
           @include mobile {
-            min-width: 95vw;
+            background-image: url("../public/images/Elixir_west.png");
+            min-width: 63vw;
+            width: 248px;
             height: 328px;
           }
 
@@ -405,7 +409,7 @@
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0.4px;
-            width: 100%;
+            width: 92%;
             max-height: 48px;
             background: linear-gradient(
               182deg,

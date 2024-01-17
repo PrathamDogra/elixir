@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,18 +14,26 @@ import LocationIcon from "../../public/assets/icons/location.svg";
 import VillasIcon from "../../public/assets/icons/villasIcon.svg";
 import SpecsIcon from "../../public/assets/icons/specifications.svg";
 import { useRouter } from "next/navigation";
+import Modal from "components/Modal";
 
 const MobileNavigation = () => {
   const [openNav, setOpenNav] = useState(false);
-
+  const [openEnquireModal, setOpenEnquireModal] = useState<boolean>(false);
   const router = useRouter();
+
+  const handleModalClose = () => {
+    setOpenEnquireModal(false);
+  };
 
   return (
     <div className={styles.container}>
       <div className={styles.mailContainer}>
-        <Link href={`mailto:${email}`}>
+        <button
+          onClick={() => setOpenEnquireModal(true)}
+          className={styles.enquireBtn}
+        >
           <Image src={MailIcon} alt="" />
-        </Link>
+        </button>
         <div>Enquire now</div>
       </div>
       <div
@@ -71,6 +79,7 @@ const MobileNavigation = () => {
         <Image src={AmenitiesIcon} width={20} height={20} alt="" />
         <div className={styles.text}>Amenities</div>
       </div>
+      {openEnquireModal && <Modal onClose={handleModalClose} />}
     </div>
   );
 };

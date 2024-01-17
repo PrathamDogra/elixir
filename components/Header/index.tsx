@@ -9,6 +9,7 @@ import { HeaderTabs, email, mobileHeaderTabs } from "../../constants";
 import Image from "next/image";
 import CrossIcon from "assets/icons/CrossRounded.svg";
 import Hamburger from "assets/icons/hamburger.svg";
+import Modal from "components/Modal";
 
 import MailIcon from "assets/icons/Mail.svg";
 import { usePathname } from "next/navigation";
@@ -20,7 +21,12 @@ interface IHeader {
 const Header = ({ customClass = "" }: IHeader) => {
   const [screenWidth, setScreenWidth] = useState<Number>(0);
   const [openHamburger, setOpenHamburger] = useState<boolean>(false);
+  const [openEnquireModal, setOpenEnquireModal] = useState<boolean>(false);
   const pathname = usePathname();
+
+  const handleModalClose = () => {
+    setOpenEnquireModal(false);
+  };
 
   useEffect(() => {
     const updateScreenWidth = () => {
@@ -69,10 +75,13 @@ const Header = ({ customClass = "" }: IHeader) => {
                 );
               })}
             </ul>
-            <Link href={`mailto:${email}`} className={styles.enquireBtn}>
+            <button
+              onClick={() => setOpenEnquireModal(true)}
+              className={styles.enquireBtn}
+            >
               <Image src={MailIcon} width={20} height={20} alt="" />
               Enquire now
-            </Link>
+            </button>
           </>
         )}
         {(screenWidth as number) < 767 && (
@@ -98,7 +107,14 @@ const Header = ({ customClass = "" }: IHeader) => {
         <div className={styles.menuHeader}>MENU</div>
         <div className={styles.menuList}>
           {mobileHeaderTabs?.map((headerItem) => (
-            <Link href={headerItem.url} className={styles.menuItem}>
+            <Link
+              href={headerItem.url}
+              className={styles.menuItem}
+              onClick={() => {
+                if (headerItem.name === "Enquire now")
+                  setOpenEnquireModal(true);
+              }}
+            >
               <div className={styles.circularIcon}>
                 <Image src={headerItem?.icon} alt="" width={9} height={9} />
               </div>
@@ -107,6 +123,7 @@ const Header = ({ customClass = "" }: IHeader) => {
           ))}
         </div>
       </div>
+      {openEnquireModal && <Modal onClose={handleModalClose} />}
     </header>
   );
 };

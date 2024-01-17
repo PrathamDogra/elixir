@@ -100,7 +100,7 @@ export const mobileHeaderTabs = [
   { name: "Location", url: "/#location", icon: LocationIcon },
   {
     name: "Enquire now",
-    url: "mailto:sales.elixir@dsrinfra.com",
+    url: "",
     icon: EnquireNowIcon,
   },
   {

@@ -79,6 +79,7 @@ const HomePage = () => {
           <div className={styles.second} />
           <div className={styles.third} />
           <div className={styles.fourth} />
+          <div className={styles.fifth} />
         </div>
       </div>
 
@@ -241,16 +242,16 @@ const HomePage = () => {
       </div>
       <div className={styles.ourLocationSection} id="location">
         <div className={styles.ourLocation}>Our location</div>
-        <div className={styles.mapImage}></div>
         <Link
           href={"https://maps.app.goo.gl/XVjPCCEVAQWr7Hyo9?g_st=iw"}
           className={styles.viewBtn}
           target="_blank"
         >
-          VIEW ON GOOGLE MAPS
+          VIEW ON GOOGLE MAPS&nbsp;
           <Image src={PlayIcon} width={6} height={10} alt="" />
           <Image src={PlayIcon} width={6} height={10} alt="" />
         </Link>
+        <div className={styles.mapImage}></div>
       </div>
       <Footer />
       {(screenWidth as number) < 767 && <MobileNavigation />}

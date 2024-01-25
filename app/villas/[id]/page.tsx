@@ -1,9 +1,9 @@
-"use client";
+
 import BackIcon from "assets/icons/Back-Rounded.svg";
 import Image from "next/image";
 import styles from "./index.module.scss";
-import { useRouter } from "next/navigation";
 import { VillasPages } from "../../../constants";
+import Link from "next/link";
 
 interface IParams {
   id: string;
@@ -13,8 +13,11 @@ interface IVillasProps {
   params: IParams;
 }
 
+export function generateStaticParams() {
+  return [{ id: 'E1200' }, { id: 'E1500' }, { id: 'E2105' }, { id: 'E2400' }, { id: 'W1200' }, { id: 'W1500' }, { id: 'W2105' }, { id: 'W2400' } ]
+}
+
 const VillasComponent = ({ params }: IVillasProps) => {
-  const router = useRouter();
   const { id } = params;
 
   const values = VillasPages(id);
@@ -22,13 +25,12 @@ const VillasComponent = ({ params }: IVillasProps) => {
   return (
     <div className="page-container">
       <div className={styles.header}>
-        <button
-          type="button"
-          className={styles.backBtn}
-          onClick={() => router.back()}
-        >
-          <Image src={BackIcon} width={32} height={32} alt="back" />
-        </button>
+      <Link href="/villas">
+      <a className={styles.backBtn}>
+            <Image src={BackIcon} width={32} height={32} alt="back" />
+          </a>
+          </Link>
+      
         <div className={styles.headerDescription}>
           <div className={styles.heading}>{values?.name}</div>
           <div className={styles.description}>

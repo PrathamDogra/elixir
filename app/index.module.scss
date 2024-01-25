@@ -76,7 +76,7 @@
       gap: 7px;
     }
     .first {
-      background-image: url("../assets/images/home-image-1.jpeg");
+      background-image: url("../assets/images/home-image-1.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -136,10 +136,24 @@
         height: 359px;
       }
     }
+    .fifth {
+      background-image: url("../assets/images/ELIXIR-RENDER-4.png");
+      background-position: center;
+      width: 800px;
+      min-width: 800px;
+      height: 600px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include mobile {
+        width: 414px;
+        min-width: 414px;
+        height: 359px;
+      }
+    }
   }
 
   .leftImage {
-    background-image: url("../assets/images/home-image-1.jpeg");
+    background-image: url("../assets/images/home-image-1.png");
     background-position: center;
     width: 815px;
     height: 652px;
@@ -465,13 +479,14 @@
 .ourLocationSection {
   position: relative;
   height: 100%;
-  min-height: 750px;
+  min-height: 1000px;
   padding: 36px 104px;
   background-color: #7a8c51;
   margin-top: 80px;
 
   @include mobile {
     padding: 30px 20px;
+    min-height: 550px;
   }
 
   .ourLocation {
@@ -484,7 +499,7 @@
   }
   .mapImage {
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
@@ -492,14 +507,21 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 70%;
-    min-width: 810px;
     height: 79%;
+
+    @include mobile {
+      top: 70%;
+      width: 90%;
+      height: 100%;
+      border-radius: 0%;
+      background-size: contain;
+    }
   }
 
   .viewBtn {
-    position: absolute;
-    bottom: 50px;
-    left: 104px;
+    position: relative;
+    top: -10px;
+    left: 0;
     @include btn-class;
     color: #22401e;
     font-size: 16px;
@@ -509,10 +531,6 @@
     letter-spacing: -0.4px;
     display: flex;
     align-items: center;
-
-    @include mobile {
-      left: 20px;
-    }
   }
 }
 

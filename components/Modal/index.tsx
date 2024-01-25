@@ -62,8 +62,48 @@ const Modal = ({ onClose }: IModal) => {
     setEnquiryForm({ ...enquiryForm, [name]: value });
   };
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const number = formData.get("number") as string;
+    const message = formData.get("message") as string;
+    const mailtoLink = `mailto:sales.elixir@dsrinfra.com?subject=Enquiry for DSR Elixir&body=Name: ${name}%0D%0AEmail: ${email}%0D%0ANumber: ${number}%0D%0AMessage: ${message}`;
+
+    window.location.href = mailtoLink;
+    /*try {
+      const response = await fetch('http://dsrinfra08.remserp.com/IVR_Inbound.aspx?UID=fourqt&PWD=wn9mxO76f34=&f=m&con=$number&email=$email&name=$name&Remark=$message&Proj=DSR Elixir&src=DSR Elixir&city=Bangalore&ch=MS', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(enquiryForm),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const result = await response.json();
+      console.log('\n\nForm submitted successfully:', result);
+      setFormSubmitted(true);
+    } 
+    
+    catch (error) {
+      console.error('\n\nError submitting form:', error);
+    }*/
+    
+    setEnquiryForm({
+      name: "",
+      email: "",
+      number: "",
+      message: "",
+    });
+    setFormSubmitted(true);
+    onClose();
   };
 
   return ReactDOM.createPortal(
@@ -155,7 +195,7 @@ const Modal = ({ onClose }: IModal) => {
               </div>
               <input
                 type="submit"
-                value={"Send"}
+                value={formSubmitted ? "Submitted" : "Send"}
                 className={styles.submitBtn}
               />
             </form>

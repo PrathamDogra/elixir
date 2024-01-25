@@ -189,8 +189,9 @@
                 color: #6e6e73;
                 font-size: 20px;
                 font-style: normal;
-                font-weight: 300 !important;
+                font-weight: 300;
                 line-height: normal;
+                font-family: sans-serif;
               }
 
               @include mobile {
@@ -200,6 +201,7 @@
 
                 &::placeholder {
                   font-size: 16px;
+                  font-family: sans-serif;
                 }
               }
             }

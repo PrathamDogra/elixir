@@ -45,7 +45,7 @@ const Footer = () => {
               <div className={styles.value}>
                 <div className={styles.text}>{info.value}</div>
                 {info.number && (
-                  <div className={styles.text}>{info.number}</div>
+                  <div className={styles.number1}>{info.number}</div>
                 )}
               </div>
             </div>

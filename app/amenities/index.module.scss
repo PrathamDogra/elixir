@@ -14,10 +14,12 @@
 
   .heading {
     color: #8c6542;
-    font-size: 40px;
+    font-family: Platform;
     font-style: normal;
+    font-size: 40px;
     font-weight: 400;
     line-height: normal;
+    letter-spacing: 0.8px;
     width: 90%;
 
     @include mobile {

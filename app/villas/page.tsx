@@ -71,6 +71,14 @@ const Villas = () => {
           <Image src={DownloadIcon} alt="" width={11} height={6} />
         </div>
       </Link>
+      {/* <video width="100%" height="240" controls preload="none">
+        <source
+          src={
+            "https://drive.google.com/file/d/1Oh7zmKxtnFpyxxybgtR1Y6nUvZfAMF37/view?usp=sharing"
+          }
+          type="video/mp4"
+        />
+      </video> */}
       <div className={styles.header}>EAST FACING VILLAS</div>
       <div className={styles.slidesContainer}>
         {EastFacingVllas?.map((villa) => (
@@ -134,7 +142,7 @@ const Villas = () => {
         </div>
       </div>
       <div className={styles.headingSection}>
-        <div className={styles.heading}>MASTERPLAN</div>
+        <div className={styles.heading}>Masterplan</div>
         <div className={styles.subHeading}>
           Explore our site plan, a playground of possibilities where recreation,
           fitness, leisure, and play seamlessly unite, creating a vibrant

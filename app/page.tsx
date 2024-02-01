@@ -22,6 +22,16 @@ const HomePage = () => {
   const [showEastFacing, setShowEastFacing] = useState(false);
   const [showWestFacing, setShowWestFacing] = useState(false);
 
+  const handleHoverEventEastFacing = (e: any) => {
+    if (e.type === "mouseenter") setShowEastFacing(true);
+    else if (e.type === "mouseleave") setShowEastFacing(false);
+  };
+
+  const handleHoverEventWestFacing = (e: any) => {
+    if (e.type === "mouseenter") setShowWestFacing(true);
+    else if (e.type === "mouseleave") setShowWestFacing(false);
+  };
+
   useEffect(() => {
     const updateScreenWidth = () => {
       if (typeof window !== "undefined") {
@@ -133,8 +143,10 @@ const HomePage = () => {
               className={cn(styles["villas_1"], {
                 [styles.showImage]: showEastFacing,
               })}
+              onMouseEnter={handleHoverEventEastFacing}
+              onMouseLeave={handleHoverEventEastFacing}
             >
-              <button
+              {/* <button
                 type="button"
                 className={styles.plusBtn}
                 onClick={() => setShowEastFacing((prev) => !prev)}
@@ -144,7 +156,7 @@ const HomePage = () => {
                 ) : (
                   <Image src={PlusIcon} alt="" width={16} height={16} />
                 )}
-              </button>
+              </button> */}
               {showEastFacing && (
                 <div className={styles["villas_1_para"]}>
                   Indulge in the epitome of luxury with our 3+BHK villas,
@@ -159,8 +171,10 @@ const HomePage = () => {
               className={cn(styles["villas_2"], {
                 [styles.showImage]: showWestFacing,
               })}
+              onMouseEnter={handleHoverEventWestFacing}
+              onMouseLeave={handleHoverEventWestFacing}
             >
-              <button
+              {/* <button
                 type="button"
                 className={styles.plusBtn}
                 onClick={() => setShowWestFacing((prev) => !prev)}
@@ -170,7 +184,7 @@ const HomePage = () => {
                 ) : (
                   <Image src={PlusIcon} alt="" width={16} height={16} />
                 )}
-              </button>
+              </button> */}
               {showWestFacing && (
                 <div className={styles["villas_2_para"]}>
                   Uncover the essence of luxury in our 4+BHK villas, offering
@@ -242,6 +256,7 @@ const HomePage = () => {
       </div>
       <div className={styles.ourLocationSection} id="location">
         <div className={styles.ourLocation}>Our location</div>
+        <div className={styles.mapImage}></div>
         <Link
           href={"https://maps.app.goo.gl/XVjPCCEVAQWr7Hyo9?g_st=iw"}
           className={styles.viewBtn}
@@ -251,7 +266,6 @@ const HomePage = () => {
           <Image src={PlayIcon} width={6} height={10} alt="" />
           <Image src={PlayIcon} width={6} height={10} alt="" />
         </Link>
-        <div className={styles.mapImage}></div>
       </div>
       <Footer />
       {(screenWidth as number) < 767 && <MobileNavigation />}

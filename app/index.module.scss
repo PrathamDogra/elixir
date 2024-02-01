@@ -15,10 +15,12 @@
 
   .heading {
     color: #8c6542;
-    font-size: 40px;
+    font-family: Platform;
     font-style: normal;
+    font-size: 40px;
     font-weight: 400;
     line-height: normal;
+    letter-spacing: 0.8px;
 
     @include mobile {
       font-size: 36px;
@@ -233,10 +235,12 @@
   gap: 40px;
   .heading {
     color: #8c6542;
-    font-size: 40px;
+    font-family: Platform;
     font-style: normal;
+    font-size: 40px;
     font-weight: 400;
     line-height: normal;
+    letter-spacing: 0.8px;
 
     @include mobile {
       font-size: 24px;
@@ -262,7 +266,7 @@
         font-size: 28px;
         font-style: normal;
         font-weight: 300;
-        line-height: 40px;
+        line-height: 34px;
         letter-spacing: -0.56px;
 
         @include mobile {
@@ -276,7 +280,7 @@
         font-size: 28px;
         font-style: normal;
         font-weight: 400;
-        line-height: 40px;
+        line-height: 34px;
         letter-spacing: -0.56px;
         @include mobile {
           font-size: 24px;
@@ -321,10 +325,11 @@
           position: relative;
           background-image: url("../assets/images/Elixir-east-villa.png");
           background-position: center;
-          height: 436px;
-          width: 338px;
+          width: 399px;
+          height: 408px;
           background-repeat: no-repeat;
           background-size: cover;
+          transition: all 0.5s ease-in-out;
 
           &.showImage {
             background-image: none;
@@ -350,8 +355,7 @@
 
           @include mobile {
             width: 248px;
-            height: 328px;
-            min-width: 63vw;
+            height: 248px;
             background-image: url("../public/images/Elixir_east.png");
           }
 
@@ -366,7 +370,7 @@
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0.4px;
-            width: 338px;
+            width: 380px;
             max-height: 40px;
             background: linear-gradient(
               182deg,
@@ -398,10 +402,11 @@
         &_2 {
           position: relative;
           background-image: url("../assets/images/Elixir_west-side.png");
-          height: 436px;
-          width: 338px;
+          width: 399px;
+          height: 408px;
           background-repeat: no-repeat;
           background-size: cover;
+          transition: all 0.5s ease-in-out;
 
           &.showImage {
             background-image: none;
@@ -427,9 +432,8 @@
 
           @include mobile {
             background-image: url("../public/images/Elixir_west.png");
-            min-width: 63vw;
             width: 248px;
-            height: 328px;
+            height: 248px;
           }
 
           .villas_text {
@@ -443,7 +447,7 @@
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0.4px;
-            width: 338px;
+            width: 399px;
             max-height: 40px;
             background: linear-gradient(
               182deg,
@@ -490,13 +494,16 @@
   }
 
   .ourLocation {
+    font-family: Platform;
     color: #fcfbfa;
-    font-size: 36px;
+    font-size: 40px;
+    letter-spacing: 0.8px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-bottom: 20px;
   }
+
   .mapImage {
     position: absolute;
     top: 52%;
@@ -519,9 +526,9 @@
   }
 
   .viewBtn {
-    position: relative;
-    top: -10px;
-    left: 0;
+    position: absolute;
+    bottom: 50px;
+    left: 15%;
     @include btn-class;
     color: #22401e;
     font-size: 16px;
@@ -553,10 +560,12 @@
     }
     .amnetiesHeader {
       color: #8c6542;
+      font-family: Platform;
       font-size: 40px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      letter-spacing: 0.8px;
 
       @include mobile {
         font-size: 28px;

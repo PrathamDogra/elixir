@@ -35,7 +35,7 @@ const WhatsApp = () => {
         href={`//api.whatsapp.com/send?phone=${MOBILE_NUMBER}&text=${MESSAGE}`}
         className={styles.whatsAppBtn}
       >
-        <Image src={WhatsAppIcon} width={36} height={36} alt="" />
+        <Image src={WhatsAppIcon} width={56} height={56} alt="" />
       </Link>
     )
   );
